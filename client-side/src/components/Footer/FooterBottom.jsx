@@ -11,7 +11,7 @@ const FooterBottom = () => {
       textAlign="center"
     >
       <Typography color="var(--white)" variant="h6">
-        Developed By Tanjina Akter
+        Developed By Muhammad Minhaj
       </Typography>
     </Box>
   );

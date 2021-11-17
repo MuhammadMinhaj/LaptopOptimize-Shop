@@ -22,9 +22,6 @@ const initState = {
   admins: [],
 };
 
-// foods: [],
-// singleFood: null,
-// orderFoodQuantity: 1,
 const Provider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initState);
   const applicationActions = actions(dispatch, state);

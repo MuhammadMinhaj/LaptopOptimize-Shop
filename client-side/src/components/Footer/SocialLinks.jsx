@@ -2,7 +2,7 @@ import {
   Facebook as FacebookIcon,
   Instagram as InstagramIcon,
   Twitter as TwitterIcon,
-  YouTube as YouTubeIcon,
+  YouTube as YouTubeIcon
 } from "@mui/icons-material";
 import { Box, IconButton } from "@mui/material";
 
@@ -12,7 +12,7 @@ const SocialLinks = () => {
       <IconButton
         size="large"
         color="inherit"
-        href="https://facebook.com"
+        href="https://facebook.com/MuhammadMinhaj2"
         target="_blank"
       >
         <FacebookIcon />

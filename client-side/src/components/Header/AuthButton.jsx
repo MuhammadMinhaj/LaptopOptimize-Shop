@@ -5,7 +5,7 @@ import { Box, Button } from "@mui/material";
 const AuthButton = ({ isLoggedIn, handleClick, isAdmin }) => {
   const btnName = isAdmin ? "Admin Login" : "User Login";
   return (
-    <Box color="text.secondary">
+    <Box color="var(--white)">
       <Button
         onClick={handleClick}
         size="large"

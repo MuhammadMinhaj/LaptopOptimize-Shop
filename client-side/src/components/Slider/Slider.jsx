@@ -1,66 +1,88 @@
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import LaptopIcon from "@mui/icons-material/Laptop";
+import LoginIcon from "@mui/icons-material/Login";
+import {
+  Box,
+  Button,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import useAuth from "../../hooks/useAuth";
 import Container from "../Common/Container";
-import Button from "./Button";
-import styles from "./style.module.css";
 const Slide = () => {
   const theme = useTheme();
   const isMD = useMediaQuery(theme.breakpoints.down("md"));
   const { user } = useAuth();
   return (
-    <Box className={styles.slider}>
-      <img
-        src="/static/bicycle-banner.jpg"
-        alt="website slideimage"
-        className={styles.img}
-      />
-      <Box className={styles.textContent}>
-        <Container>
-          <Box
-            height="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            textAlign="center"
-          >
-            <Box>
-              <Box py={isMD ? "0.25rem" : "1rem"}>
-                <Typography color="var(--white)" variant={isMD ? "h4" : "h2"}>
-                  Welcome to
-                </Typography>
-                <Typography color="var(--white)" variant={isMD ? "h4" : "h1"}>
-                  Blissful Pedals
-                </Typography>
-              </Box>
-
-              <Typography
-                color="var(--white)"
-                variant={isMD ? "subtitle2" : "subtitle1"}
-                pb={isMD ? "1rem" : "2rem"}
-                maxWidth="600px"
-              >
-                We have provided awesome bicycles for you, click on the "Find A
-                Bicycles" button to get your desired cycle.
+    <Box bgcolor="var(--primary-deep)">
+      <Container>
+        <Box
+          py={isMD ? "2rem" : "7rem"}
+          display="flex"
+          flexDirection={isMD ? "column-reverse" : "row"}
+          alignItems="center"
+          justifyContent="center"
+          textAlign={isMD ? "center" : "left"}
+        >
+          <Box width={isMD ? "100%" : "65%"}>
+            <Box py={isMD ? "0.25rem" : "1rem"}>
+              <Typography color="var(--white)" variant={isMD ? "h4" : "h2"}>
+                Welcome to
               </Typography>
+              <Typography color="var(--white)" variant={isMD ? "h4" : "h1"}>
+                Laptop Optimize
+              </Typography>
+            </Box>
 
-              <Box
-                display="flex"
-                flexDirection={isMD ? "column" : "row"}
-                justifyContent="center"
-                alignItems="center"
+            <Typography
+              color="var(--white)"
+              variant={isMD ? "subtitle2" : "subtitle1"}
+              pb={isMD ? "1rem" : "2rem"}
+              maxWidth="600px"
+            >
+              We are providing a great collection of laptops for you. Please
+              browse to get your desired Laptop from Our Wide Selection of
+              Branded Laptop Collection and at the most affordable Price in
+              Bangladesh.
+            </Typography>
+            <Box
+              display="flex"
+              // flexDirection={isMD ? "column" : "row"}
+              alignItems="center"
+              justifyContent={isMD ? "center" : "flex-start"}
+            >
+              <Button
+                href="/bycycles"
+                variant="outlined"
+                color="secondary"
+                startIcon={<LaptopIcon />}
+                size="large"
               >
-                <Button isSecondary path="/bicycles">
-                  Find A Bicycles
+                Browse
+              </Button>
+              <Box width="0.5rem" height="0.5rem" />
+              {!user?.email && (
+                <Button
+                  href="/user/signup"
+                  variant="contained"
+                  color="secondary"
+                  startIcon={<LoginIcon />}
+                  size="large"
+                >
+                  Sign in
                 </Button>
-                <Box width="0.5rem" height="0.5rem" />
-                {!user?.email && (
-                  <Button path="/user/signup">Signup Now</Button>
-                )}
-              </Box>
+              )}
             </Box>
           </Box>
-        </Container>
-      </Box>
+          <Box width={isMD ? "100%" : "35%"}>
+            <img
+              src="/static/laptop-png-6754.png"
+              width={isMD ? "250px" : "100%"}
+              alt="Laptop"
+            />
+          </Box>
+        </Box>
+      </Container>
     </Box>
   );
 };

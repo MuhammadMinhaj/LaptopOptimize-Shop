@@ -55,4 +55,7 @@
     max-width: 200px;
     margin: auto;
   }
+  .slider .img {
+    height: 500px;
+  }
 }

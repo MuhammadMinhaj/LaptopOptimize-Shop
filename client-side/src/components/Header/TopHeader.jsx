@@ -22,7 +22,7 @@ function TopHeader() {
           {isMD && (
             <Box display="flex" flexWrap="wrap">
               <Typography variant="subtitle1" color="var(--white)" pr="1rem">
-                Call :
+                Skypee ID:
                 <Typography
                   component="span"
                   variant="subtitle1"
@@ -30,7 +30,7 @@ function TopHeader() {
                   pr="1rem"
                 >
                   {" "}
-                  (24/7h) +3253468940
+                  212947cb52acc217
                 </Typography>
               </Typography>
 
@@ -41,7 +41,7 @@ function TopHeader() {
                   variant="subtitle1"
                   color="#9093a7"
                 >
-                  support@blissfulpedals.com
+                  programmer.mdminhaj@gmail.com
                 </Typography>
               </Typography>
             </Box>

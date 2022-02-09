@@ -3,17 +3,23 @@
   justify-content: space-between;
   list-style: none;
 }
+.nav .navItem {
+  padding: 0.25rem;
+}
 .nav .navItem > a {
   display: block;
   padding: 1rem 2rem;
   cursor: pointer;
   color: var(--white);
   text-decoration: none;
+  border: 1px solid #757891;
+  border-radius: 0.75rem;
 }
 
 .nav .navItem > a:hover {
   color: var(--secondary);
-  border-bottom: 1px solid var(--secondary);
+  background: var(--white);
+  color: var(--primary);
 }
 
 @media only screen and (max-width: 900px) {
@@ -22,5 +28,15 @@
   }
   .nav .navItem {
     text-align: center;
+  }
+  .nav .navItem > a {
+    border: none;
+    border-bottom: 1px solid #2f3142;
+    border-radius: 0rem;
+  }
+  .nav .navItem > a:hover {
+    border: 1px solid var(--white);
+    background: none;
+    color: var(--white);
   }
 }

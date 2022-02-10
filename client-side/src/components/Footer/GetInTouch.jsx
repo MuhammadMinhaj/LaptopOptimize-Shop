@@ -30,10 +30,12 @@ const GetInTouch = () => (
     />
     <Item
       icon={<EmailIcon color="inherit" />}
-      description="support@renroll.com
-"
+      description="programmer.mdminhaj@gmail.com"
     />
-    <Item icon={<PhoneIcon color="inherit" />} description="+1 755 302 8549" />
+    <Item
+      icon={<PhoneIcon color="inherit" />}
+      description="Skypee ID: 212947cb52acc217"
+    />
   </Box>
 );
 

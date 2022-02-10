@@ -21,7 +21,7 @@ function Home() {
     <main>
       <Slider />
       <Box py="4rem">
-        <Title title="Featured Category" />
+        <Title title="Featured category" />
         <Category />
       </Box>
 

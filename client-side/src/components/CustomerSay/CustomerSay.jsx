@@ -26,66 +26,60 @@ function CustomerSay() {
   };
 
   return (
-    <Box bgcolor="var(--primary)" position="relative">
-      <Box
-        component="img"
-        src="/static/client-say.jpg"
-        width="100%"
-        height="550px"
-      />
-      <Box position="absolute" top="0" width="100%" height="100%">
-        <Container>
-          <Box
-            width="100%"
-            height="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Box width="100%">
-              <Typography
-                variant="h3"
-                pb="3rem"
-                color="var(--white)"
-                align="center"
+    <Box bgcolor="var(--primary-deep)" py="5rem">
+      <Container>
+        <Box
+          width="100%"
+          height="100%"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Box width="100%">
+            <Typography
+              variant="h3"
+              pb="3rem"
+              color="var(--white)"
+              align="center"
+            >
+              Testimonials
+            </Typography>
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              color="var(--secondary)"
+            >
+              <IconButton
+                size="large"
+                color="inherit"
+                onClick={() => handleStepChange(activeStep - 1)}
               >
-                Our Customers Say
-              </Typography>
-              <Box
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                color="var(--secondary)"
+                <ArrowBackIosIcon />
+              </IconButton>
+              <AutoPlaySwipeableViews
+                axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+                index={activeStep}
+                onChangeIndex={handleStepChange}
+                enableMouseEvents
               >
-                <IconButton
-                  size="large"
-                  color="inherit"
-                  onClick={() => handleStepChange(activeStep - 1)}
-                >
-                  <ArrowBackIosIcon />
-                </IconButton>
-                <AutoPlaySwipeableViews
-                  axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-                  index={activeStep}
-                  onChangeIndex={handleStepChange}
-                  enableMouseEvents
-                >
-                  {customerSays.map((item) => (
+                {customerSays.map((item) => (
+                  <>
                     <Item {...item} key={item.title} />
-                  ))}
-                </AutoPlaySwipeableViews>
-                <IconButton
-                  size="large"
-                  color="inherit"
-                  onClick={() => handleStepChange(activeStep + 1)}
-                >
-                  <ArrowForwardIosIcon />
-                </IconButton>
-              </Box>
+                  </>
+                ))}
+              </AutoPlaySwipeableViews>
+              <IconButton
+                size="large"
+                color="inherit"
+                onClick={() => handleStepChange(activeStep + 1)}
+              >
+                <ArrowForwardIosIcon />
+              </IconButton>
             </Box>
           </Box>
-        </Container>
-      </Box>
+        </Box>
+      </Container>
     </Box>
   );
 }

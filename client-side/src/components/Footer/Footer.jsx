@@ -15,8 +15,10 @@ const Footer = () => (
           <Grid item sm={3}>
             <Brand />
             <Typography variant="subtitle1" color="var(--white)">
-              We have provided awesome bicycles for you, click on the "Find A
-              Bicycles" button to get your desired cycle.
+              We are providing a great collection of laptops for you. Please
+              browse to get your desired Laptop from Our Wide Selection of
+              Branded Laptop Collection and at the most affordable Price in
+              Bangladesh.
             </Typography>
             <SocialLinks />
           </Grid>

@@ -45,8 +45,8 @@ function Navbar() {
         {links.map(({ name, path }) => (
           <Item key={name} name={name} path={path} />
         ))}
-        {user?.email && <Item name="Profile" path="/user/profile" />}
-        {isLoggedIn && <Item name="Profile" path="/admin/profile" />}
+        {user?.email && <Item name="Dashboard" path="/user/profile" />}
+        {isLoggedIn && <Item name="Management" path="/admin/profile" />}
         {!user?.email && !isLoggedIn && (
           <Item name="Signup" path="/user/signup" />
         )}

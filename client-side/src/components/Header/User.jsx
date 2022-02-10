@@ -40,7 +40,7 @@ export default function ImageAvatars({ isAvatar }) {
   const UserAvaterView = (
     <Box
       borderRadius="1rem"
-      bgcolor="var(--neutral)"
+      bgcolor="var(--primary)"
       overflow="hidden"
       ml={isAvatar ? "0rem" : "1rem"}
     >

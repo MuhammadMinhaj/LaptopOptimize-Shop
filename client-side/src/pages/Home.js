@@ -8,7 +8,7 @@ import Fqas from "../components/FQAS/FQAS";
 import Reviews from "../components/Reviews/Reviews";
 import Slider from "../components/Slider/Slider";
 import StaticInfo from "../components/StaticInfo/StaticInfo";
-import WhyOurBicycle from "../components/WhyOurBicycle/WhyOurBicycle";
+import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs";
 import appContext from "../context/context";
 function Home() {
   const { fetchBicyclesData } = useContext(appContext);
@@ -20,8 +20,8 @@ function Home() {
     <main>
       <Slider />
       <Box py="4rem">
-        <Title title="Why to Rent Our Bicycle?" />
-        <WhyOurBicycle />
+        <Title title="Why Choose Us?" />
+        <WhyChooseUs />
       </Box>
       <Box py="2rem">
         <Bicycles isNone limit={6} />

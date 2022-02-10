@@ -6,7 +6,7 @@ const cors = require("cors");
 // Initialize app
 const app = express();
 
-const DB_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@dream-softwares.dyvoa.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const DB_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.8vfqj.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 const PORT = process.env.PORT || 8080;
 

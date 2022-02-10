@@ -2,6 +2,7 @@ import { Box, Button } from "@mui/material";
 import { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Bicycles from "../components/Bicycles/Bicycles";
+import Category from "../components/Category/Category";
 import Title from "../components/Common/Title";
 import CustomerSay from "../components/CustomerSay/CustomerSay";
 import Fqas from "../components/FQAS/FQAS";
@@ -20,7 +21,12 @@ function Home() {
     <main>
       <Slider />
       <Box py="4rem">
-        <Title title="Why Choose Us?" />
+        <Title title="Featured Category" />
+        <Category />
+      </Box>
+
+      <Box py="4rem">
+        <Title title="Why choose us?" />
         <WhyChooseUs />
       </Box>
       <Box py="2rem">

@@ -3,7 +3,8 @@ import {
   Edit as EditIcon,
   Visibility as VisibilityIcon,
 } from "@mui/icons-material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+// import Ratings from "../Common/Ratings";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import {
   Box,
   Button,
@@ -16,7 +17,6 @@ import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import appContext from "../../context/context";
 import ConfirmAlert from "../Common/ConfirmAlert";
-// import Ratings from "../Common/Ratings";
 import Features from "./Features";
 const Bicycle = ({ bicycle, handleClickUpdate }) => {
   const {
@@ -45,14 +45,14 @@ const Bicycle = ({ bicycle, handleClickUpdate }) => {
   };
 
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={3}>
       <ConfirmAlert
         open={open}
         msg="bicycle"
         handleClose={handleClickDeleteToggle}
         handleSubmit={handleClickDeleteFood}
       />
-      <Box boxShadow={1} height="100%" overflow="hidden">
+      <Box boxShadow={1} height="100%" overflow="hidden" borderRadius="1rem">
         <CardActionArea
           onClick={() => history.push(`/bicycles/${bicycle._id}`)}
         >
@@ -61,20 +61,21 @@ const Bicycle = ({ bicycle, handleClickUpdate }) => {
         <Box p="0.5rem">
           <Box py="0.5rem">
             <Typography variant="subtitle1" color="text.secondary">
-              Model: 2017
+              Product Code: 34678934
             </Typography>
 
             <Box display="flex" justifyContent="space-between">
-              <Typography variant="h5">{bicycle.name}</Typography>
-              <Typography variant="h5" color="var(--secondary)">
-                {bicycle.price}$
-              </Typography>
+              <Typography variant="h6">{bicycle.name}</Typography>
             </Box>
           </Box>
-          <Divider />
 
           <Features features={bicycle?.features} />
-
+          <Divider />
+          <Box textAlign="center" py="0.5rem">
+            <Typography variant="h6" color="var(--secondary)">
+              {bicycle.price}৳
+            </Typography>
+          </Box>
           <Box
             display="flex"
             justifyContent="space-between"
@@ -98,7 +99,7 @@ const Bicycle = ({ bicycle, handleClickUpdate }) => {
               variant={isLoggedIn ? "outlined" : "text"}
               color={isLoggedIn ? "error" : "inherit"}
               startIcon={isLoggedIn && <DeleteIcon />}
-              endIcon={!isLoggedIn && <ArrowForwardIcon />}
+              endIcon={!isLoggedIn && <AddShoppingCartIcon />}
             >
               {isLoggedIn ? "Delete" : "Buy Now"}
             </Button>

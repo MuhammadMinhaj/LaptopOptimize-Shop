@@ -1,12 +1,12 @@
-import { ArrowRight as ArrowRightIcon } from "@mui/icons-material";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { Box, Typography } from "@mui/material";
 
 const FeatureItem = ({ name }) => (
-  <Box display="flex" py="0.25rem">
-    <Box mr="0.5rem" color="var(--secondary)">
-      <ArrowRightIcon color="inherit" />
+  <Box display="flex" alignItems="center">
+    <Box mr="0.25rem" color="var(--primary)">
+      <FiberManualRecordIcon color="inherit" fontSize="0.25rem" />
     </Box>
-    <Typography variant="body1" color="var(--neutral)">
+    <Typography variant="subtitle2" color="var(--neutral)">
       {name}
     </Typography>
   </Box>
@@ -16,9 +16,9 @@ const Features = ({ features }) => {
   const featuresArr = features?.split("#");
   return (
     <Box py="1rem">
-      {featuresArr?.map((item) => (
-        <FeatureItem name={item} key={item} />
-      ))}
+      {featuresArr?.map((item) =>
+        item ? <FeatureItem name={item} key={item} /> : <></>
+      )}
     </Box>
   );
 };

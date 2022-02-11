@@ -16,7 +16,7 @@ const LinkItem = ({ name, path }) => (
 const About = () => (
   <Box>
     <Typography color="var(--white)" variant="h5">
-      About Laptop Optimize
+      About Us
     </Typography>
     <Box py="0.5rem">
       <Divider />

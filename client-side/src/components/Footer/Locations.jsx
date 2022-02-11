@@ -17,7 +17,7 @@ const Item = ({ title, description, number }) => (
 const RelatedLinks = () => (
   <Box>
     <Typography color="var(--white)" variant="h5">
-      Our Locations
+      Our Branches
     </Typography>
     <Box py="0.5rem">
       <Divider />

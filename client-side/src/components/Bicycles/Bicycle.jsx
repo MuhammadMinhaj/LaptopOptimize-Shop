@@ -70,39 +70,43 @@ const Bicycle = ({ bicycle, handleClickUpdate }) => {
           </Box>
 
           <Features features={bicycle?.features} />
-          <Divider />
-          <Box textAlign="center" py="0.5rem">
-            <Typography variant="h6" color="var(--secondary)">
-              {bicycle.price}৳
-            </Typography>
-          </Box>
-          <Box
-            display="flex"
-            justifyContent="space-between"
-            color={isLoggedIn ? "var(--primary)" : "var(--secondary)"}
-          >
-            <Button
-              onClick={isLoggedIn ? handleClickEdit : handleClickDetail}
-              fullWidth
-              variant="outlined"
-              mx="0.5rem"
-              color="inherit"
-              startIcon={isLoggedIn ? <EditIcon /> : <VisibilityIcon />}
+          <Box>
+            <Divider />
+            <Box textAlign="center" py="0.5rem">
+              <Typography variant="h6" color="var(--secondary)">
+                {bicycle.price}৳
+              </Typography>
+            </Box>
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              color={isLoggedIn ? "var(--primary)" : "var(--secondary)"}
             >
-              {isLoggedIn ? "Edit" : "Details"}
-            </Button>
-            <Box width="1rem" />
-            <Button
-              onClick={isLoggedIn ? handleClickDeleteToggle : handleClickOrder}
-              fullWidth
-              mx="0.5rem"
-              variant={isLoggedIn ? "outlined" : "text"}
-              color={isLoggedIn ? "error" : "inherit"}
-              startIcon={isLoggedIn && <DeleteIcon />}
-              endIcon={!isLoggedIn && <AddShoppingCartIcon />}
-            >
-              {isLoggedIn ? "Delete" : "Buy Now"}
-            </Button>
+              <Button
+                onClick={isLoggedIn ? handleClickEdit : handleClickDetail}
+                fullWidth
+                variant="outlined"
+                mx="0.5rem"
+                color="inherit"
+                startIcon={isLoggedIn ? <EditIcon /> : <VisibilityIcon />}
+              >
+                {isLoggedIn ? "Edit" : "Details"}
+              </Button>
+              <Box width="1rem" />
+              <Button
+                onClick={
+                  isLoggedIn ? handleClickDeleteToggle : handleClickOrder
+                }
+                fullWidth
+                mx="0.5rem"
+                variant={isLoggedIn ? "outlined" : "text"}
+                color={isLoggedIn ? "error" : "inherit"}
+                startIcon={isLoggedIn && <DeleteIcon />}
+                endIcon={!isLoggedIn && <AddShoppingCartIcon />}
+              >
+                {isLoggedIn ? "Delete" : "Buy Now"}
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Box>

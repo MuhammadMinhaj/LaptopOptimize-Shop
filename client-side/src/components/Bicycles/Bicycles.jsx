@@ -54,7 +54,7 @@ const Bicycles = ({ isNone, limit }) => {
           alignItems="center"
         >
           <Typography py="1rem" variant="h6" color="text.secondary">
-            Total Bicycles :{" "}
+            Total Items :{" "}
             <Typography component="span" variant="h6" color="var(--primary)">
               {bicycles?.length || "N/A"}
             </Typography>

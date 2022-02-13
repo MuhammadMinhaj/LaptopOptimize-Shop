@@ -39,7 +39,7 @@ function Home() {
             size="large"
             fullWidth
           >
-            See More Bicycles
+            See More
           </Button>
         </Box>
       </Box>

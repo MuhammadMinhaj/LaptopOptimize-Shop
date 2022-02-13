@@ -13,7 +13,7 @@ function BicyclesPage() {
     <main>
       <Box py="2rem">
         <Title
-          fTitle="Foods"
+          fTitle="Products"
           lTitle="Menu"
           subTitle="Choose your desire foods"
         />

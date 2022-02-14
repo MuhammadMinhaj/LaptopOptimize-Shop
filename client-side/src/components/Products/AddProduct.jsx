@@ -2,7 +2,7 @@ import { Add as AddIcon } from "@mui/icons-material";
 import { Box, Button } from "@mui/material";
 import { useState } from "react";
 import AddModal from "./AddModal";
-const AddBicycle = () => {
+const AddProduct = () => {
   const [open, setOpen] = useState(false);
   const handleToggle = () => {
     setOpen(!open);
@@ -24,7 +24,7 @@ const AddBicycle = () => {
           fullWidth
           onClick={handleToggle}
         >
-          Add Bicycle
+          Add Product
         </Button>
       </Box>
       <AddModal open={open} handleToggle={handleToggle} />
@@ -32,4 +32,4 @@ const AddBicycle = () => {
   );
 };
 
-export default AddBicycle;
+export default AddProduct;

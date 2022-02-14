@@ -3,11 +3,11 @@ import { useContext, useState } from "react";
 import appContext from "../../context/context";
 import Container from "../Common/Container";
 import Title from "../Common/Title";
-import AddBicycle from "./AddBicycle";
-import Bicycle from "./Bicycle";
+import AddProduct from "./AddProduct";
+import Product from "./Product";
 import UpdateModal from "./UpdateModal";
 
-const Bicycles = ({ isNone, limit }) => {
+const Products = ({ isNone, limit }) => {
   const {
     state: {
       bicycles,
@@ -60,11 +60,11 @@ const Bicycles = ({ isNone, limit }) => {
             </Typography>
           </Typography>
 
-          {isLoggedIn && !isNone && <AddBicycle />}
+          {isLoggedIn && !isNone && <AddProduct />}
         </Box>
         <Grid container spacing={2}>
           {bicycles.slice(0, limit || bicycles.length).map((bicycle) => (
-            <Bicycle
+            <Product
               bicycle={bicycle}
               key={bicycle._id}
               handleClickUpdate={handleClickUpdateToggle}
@@ -75,4 +75,4 @@ const Bicycles = ({ isNone, limit }) => {
     </Box>
   );
 };
-export default Bicycles;
+export default Products;

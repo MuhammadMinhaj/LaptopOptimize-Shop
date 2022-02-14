@@ -18,7 +18,7 @@ import { useHistory } from "react-router-dom";
 import appContext from "../../context/context";
 import ConfirmAlert from "../Common/ConfirmAlert";
 import Features from "./Features";
-const Bicycle = ({ bicycle, handleClickUpdate }) => {
+const Product = ({ bicycle, handleClickUpdate }) => {
   const {
     state: {
       admin: { isLoggedIn },
@@ -113,4 +113,4 @@ const Bicycle = ({ bicycle, handleClickUpdate }) => {
     </Grid>
   );
 };
-export default Bicycle;
+export default Product;

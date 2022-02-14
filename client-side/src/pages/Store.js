@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
 import { useContext, useEffect } from "react";
-import Bicycles from "../components/Bicycles/Bicycles";
 import Title from "../components/Common/Title";
+import Bicycles from "../components/Products/Products";
 import appContext from "../context/context";
 
-function BicyclesPage() {
+function Store() {
   const { fetchBicyclesData } = useContext(appContext);
   useEffect(() => {
     fetchBicyclesData();
@@ -22,4 +22,4 @@ function BicyclesPage() {
     </main>
   );
 }
-export default BicyclesPage;
+export default Store;

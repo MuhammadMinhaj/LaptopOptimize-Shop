@@ -1,11 +1,11 @@
 import { Box, Button } from "@mui/material";
 import { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Bicycles from "../components/Bicycles/Bicycles";
 import Category from "../components/Category/Category";
 import Title from "../components/Common/Title";
 import CustomerSay from "../components/CustomerSay/CustomerSay";
 import Fqas from "../components/FQAS/FQAS";
+import Bicycles from "../components/Products/Products";
 import Reviews from "../components/Reviews/Reviews";
 import Slider from "../components/Slider/Slider";
 import StaticInfo from "../components/StaticInfo/StaticInfo";

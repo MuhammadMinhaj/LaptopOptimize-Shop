@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { useContext, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import BicycleDetail from "../components/Bicycles/Detail";
+import BicycleDetail from "../components/Products/Detail";
 import appContext from "../context/context";
 
 function BicycleDetailPage() {

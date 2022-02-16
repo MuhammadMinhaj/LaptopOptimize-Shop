@@ -10,12 +10,12 @@ import aboutPage from "../pages/About";
 import ManageAdminPage from "../pages/Admin/ManageAdmin";
 import AdminProfile from "../pages/Admin/Profile";
 import adminLogin from "../pages/AdminLogin";
-import bicycleDetailPage from "../pages/BicycleDetail";
-import bicyclesPage from "../pages/Bicycles";
 import homePage from "../pages/Home";
 import orderPage from "../pages/Order";
 import orderManagementPage from "../pages/OrdersManagement";
 import payPage from "../pages/Pay";
+import productDetailPage from "../pages/ProductDetail";
+import storePage from "../pages/Store";
 import userOrdersPage from "../pages/User/Orders";
 import UserProfilePage from "../pages/User/Profile";
 import UserReviewsPage from "../pages/User/Reviews";
@@ -44,12 +44,12 @@ const routes = [
     path: "/about-us",
   },
   {
-    component: bicycleDetailPage,
-    path: "/bicycles/:id",
+    component: productDetailPage,
+    path: "/store/:id",
   },
   {
-    component: bicyclesPage,
-    path: "/bicycles",
+    component: storePage,
+    path: "/store",
   },
   {
     component: reviewsPage,

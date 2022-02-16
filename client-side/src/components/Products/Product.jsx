@@ -28,7 +28,7 @@ const Product = ({ bicycle, handleClickUpdate }) => {
   const history = useHistory();
   const [open, setOpen] = useState(false);
   const handleClickDetail = () => {
-    history.push(`/bicycles/${bicycle._id}`);
+    history.push(`/store/${bicycle._id}`);
   };
   const handleClickOrder = () => {
     history.push(`/order/${bicycle._id}`);
@@ -53,9 +53,7 @@ const Product = ({ bicycle, handleClickUpdate }) => {
         handleSubmit={handleClickDeleteFood}
       />
       <Box boxShadow={1} height="100%" overflow="hidden" borderRadius="1rem">
-        <CardActionArea
-          onClick={() => history.push(`/bicycles/${bicycle._id}`)}
-        >
+        <CardActionArea onClick={() => history.push(`/store/${bicycle._id}`)}>
           <Box component="img" width="100%" height="300px" src={bicycle.img} />
         </CardActionArea>
         <Box p="0.5rem">

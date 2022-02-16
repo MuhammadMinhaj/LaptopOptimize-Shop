@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 import BicycleDetail from "../components/Products/Detail";
 import appContext from "../context/context";
 
-function BicycleDetailPage() {
+function ProductDetailPage() {
   const { fetchSingleBicycleById } = useContext(appContext);
   const { id } = useParams();
   const history = useHistory();
@@ -20,4 +20,4 @@ function BicycleDetailPage() {
     </main>
   );
 }
-export default BicycleDetailPage;
+export default ProductDetailPage;

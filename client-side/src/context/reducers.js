@@ -5,12 +5,12 @@ const {
   APP_CLOSE_ALERT_MESSAGE,
   SET_LOADING_STATUS,
   SET_ADMIN_LOGGED_IN,
-  FETCH_BICYCLES_DATA_SUCCESS,
-  FETCH_SINGLE_BICYCLE_DATA_SUCCESS,
-  ADD_BICYCLE_SUCCESS,
-  DELETE_BICYCLE_SUCCESS,
-  UPDATE_BICYCLE_SUCCESS,
-  USER_CHANGE_BICYCLE_QUANTITY,
+  FETCH_PRODUCTS_DATA_SUCCESS,
+  FETCH_SINGLE_PRODUCT_DATA_SUCCESS,
+  ADD_PRODUCT_SUCCESS,
+  DELETE_PRODUCT_SUCCESS,
+  UPDATE_PRODUCT_SUCCESS,
+  USER_CHANGE_PRODUCT_QUANTITY,
   USER_ORDER_CONFIRM_SUCCESS,
   FETCH_USER_ORDERS_SUCCESS,
   ORDER_DELETE_SUCCESS,
@@ -59,27 +59,27 @@ const reducer = (state, actions) => {
         },
       };
       return state;
-    case FETCH_BICYCLES_DATA_SUCCESS:
+    case FETCH_PRODUCTS_DATA_SUCCESS:
       state = {
         ...state,
-        bicycles: [...actions.payload],
+        products: [...actions.payload],
       };
       return state;
-    case FETCH_SINGLE_BICYCLE_DATA_SUCCESS:
+    case FETCH_SINGLE_PRODUCT_DATA_SUCCESS:
       state = {
         ...state,
-        singleBicycle: actions.payload,
+        singleProduct: actions.payload,
       };
       return state;
-    case ADD_BICYCLE_SUCCESS:
+    case ADD_PRODUCT_SUCCESS:
       state = {
         ...state,
-        bicycles: [...state.bicycles, { ...actions.payload }],
+        products: [...state.products, { ...actions.payload }],
       };
       return state;
 
-    case UPDATE_BICYCLE_SUCCESS:
-      const updatedBicycles = state.bicycles.map((food) => {
+    case UPDATE_PRODUCT_SUCCESS:
+      const updatedBicycles = state.products.map((food) => {
         if (food._id === actions.payload._id) {
           return {
             ...food,
@@ -90,29 +90,29 @@ const reducer = (state, actions) => {
       });
       state = {
         ...state,
-        bicycles: updatedBicycles,
+        products: updatedBicycles,
       };
       return state;
-    case DELETE_BICYCLE_SUCCESS:
-      let filteredBicycles = state.bicycles.filter(
+    case DELETE_PRODUCT_SUCCESS:
+      let filteredBicycles = state.products.filter(
         (food) => food._id !== actions.payload
       );
       state = {
         ...state,
-        bicycles: filteredBicycles,
+        products: filteredBicycles,
       };
       return state;
-    case USER_CHANGE_BICYCLE_QUANTITY:
+    case USER_CHANGE_PRODUCT_QUANTITY:
       state = {
         ...state,
-        orderBicycleQuantity: actions.payload,
+        orderProductQuantity: actions.payload,
       };
       return state;
     case USER_ORDER_CONFIRM_SUCCESS:
       state = {
         ...state,
         userOrders: [...state.userOrders, { ...actions.payload }],
-        orderBicycleQuantity: 1,
+        orderProductQuantity: 1,
       };
       return state;
     case FETCH_USER_ORDERS_SUCCESS:

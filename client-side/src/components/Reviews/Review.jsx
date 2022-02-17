@@ -1,19 +1,8 @@
-import {
-  Avatar,
-  Box,
-  CardActionArea,
-  Divider,
-  Rating,
-  Typography,
-} from "@mui/material";
-import { useHistory } from "react-router-dom";
+import { Avatar, Box, Divider, Rating, Typography } from "@mui/material";
 
 const Review = ({ review, borderNone }) => {
-  const history = useHistory();
   return (
-    <CardActionArea
-      onClick={() => history.push(`/bicycles/${review?.bicycle?._id}`)}
-    >
+    <>
       <Box py="0.5rem" display="flex">
         <Box textAlign="center">
           <Avatar
@@ -37,7 +26,7 @@ const Review = ({ review, borderNone }) => {
         </Box>
       </Box>
       {!borderNone && <Divider />}
-    </CardActionArea>
+    </>
   );
 };
 

@@ -12,9 +12,9 @@ const initState = {
   admin: {
     isLoggedIn: false,
   },
-  bicycles: [],
-  singleBicycle: null,
-  orderBicycleQuantity: 1,
+  products: [],
+  singleProduct: null,
+  orderProductQuantity: 1,
   userOrders: [],
   orders: [],
   isLoading: false,

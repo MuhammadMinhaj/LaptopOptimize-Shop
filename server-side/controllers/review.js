@@ -1,8 +1,9 @@
 const Review = require("../models/Review");
-const Bicycle = require("../models/Bicycle");
+const Bicycle = require("../models/Product");
 // Get reviews
 exports.getReviewsGetController = async (req, res) => {
-  const { uid } = req.query;
+  const { uid, prodId } = req.query;
+  console.log({ uid, prodId });
   try {
     let reviews = [];
 
@@ -11,13 +12,14 @@ exports.getReviewsGetController = async (req, res) => {
         path: "bicycle",
         select: "name img",
       });
-    } else {
-      reviews = await Review.find().populate({
+    }
+    if (prodId) {
+      reviews = await Review.find({ bicycle: prodId }).populate({
         path: "bicycle",
         select: "name img",
       });
     }
-
+    console.log(reviews);
     res.status(200).json({ reviews });
   } catch (e) {
     res.status(500).json({ message: "Internal server error" });

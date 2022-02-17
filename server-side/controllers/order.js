@@ -1,5 +1,5 @@
 const Order = require("../models/Order");
-const Bicycle = require("../models/Bicycle");
+const Bicycle = require("../models/Product");
 
 // Get orders by user email
 exports.getUserOrdersGetController = async (req, res) => {

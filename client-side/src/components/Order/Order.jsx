@@ -5,11 +5,11 @@ import { useHistory } from "react-router-dom";
 import appContext from "../../context/context";
 import Container from "../Common/Container";
 import ListItem from "../Common/ListItem";
-import Bicycle from "./Bicycle";
 import Info from "./Info";
+import Product from "./Product";
 const Order = () => {
   const {
-    state: { orderBicycleQuantity, singleBicycle },
+    state: { orderProductQuantity, singleProduct },
     handleSubmitOrderBicycle,
   } = useContext(appContext);
   const fullNameRef = useRef();
@@ -27,8 +27,8 @@ const Order = () => {
         address: getValue(addressRef),
         phone: getValue(phoneRef),
         email: getValue(emailRef),
-        bicycle: singleBicycle._id,
-        quantity: orderBicycleQuantity,
+        bicycle: singleProduct._id,
+        quantity: orderProductQuantity,
       },
       history
     );
@@ -40,7 +40,7 @@ const Order = () => {
   return (
     <Container>
       <Box component="form" onSubmit={handleSubmit}>
-        <Bicycle />
+        <Product />
         <Typography variant="h5" color="var(--primary)" py="0.5rem">
           Your Detail
         </Typography>
@@ -55,10 +55,10 @@ const Order = () => {
           Order Detail
         </Typography>
 
-        <ListItem name="Quantity" desc={orderBicycleQuantity} />
+        <ListItem name="Quantity" desc={orderProductQuantity} />
         <ListItem
           name="Total Price"
-          desc={singleBicycle?.price * orderBicycleQuantity + "$"}
+          desc={singleProduct?.price * orderProductQuantity + "$"}
         />
         <Box color="var(--secondary)">
           <Button

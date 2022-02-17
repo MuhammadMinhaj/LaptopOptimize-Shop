@@ -24,14 +24,14 @@ export default function UpdateModal({
         open={open}
         onClose={() => handleToggle(null)}
       >
-        <DialogTitle>Update Bicycle"</DialogTitle>
+        <DialogTitle>Update Product"</DialogTitle>
         <Divider />
         <DialogContent>
           <TextField
             autoFocus
             margin="dense"
             id="name"
-            label="Bicycle Name"
+            label="Product Name"
             fullWidth
             variant="outlined"
             onChange={handleChange}

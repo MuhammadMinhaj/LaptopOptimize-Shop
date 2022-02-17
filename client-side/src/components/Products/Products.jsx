@@ -9,7 +9,7 @@ import UpdateModal from "./UpdateModal";
 const Products = ({ isNone, limit }) => {
   const {
     state: {
-      bicycles,
+      products,
       admin: { isLoggedIn },
     },
     updateBicycleHandleSubmit,
@@ -54,14 +54,14 @@ const Products = ({ isNone, limit }) => {
           <Typography py="1rem" variant="h6" color="text.secondary">
             Total Product :{" "}
             <Typography component="span" variant="h6" color="var(--primary)">
-              {bicycles?.length || "N/A"}
+              {products?.length || "N/A"}
             </Typography>
           </Typography>
 
           {isLoggedIn && !isNone && <AddProduct />}
         </Box>
         <Grid container spacing={2}>
-          {bicycles.slice(0, limit || bicycles.length).map((bicycle) => (
+          {products.slice(0, limit || products.length).map((bicycle) => (
             <Product
               bicycle={bicycle}
               key={bicycle._id}

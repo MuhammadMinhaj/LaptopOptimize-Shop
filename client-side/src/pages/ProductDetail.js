@@ -5,11 +5,13 @@ import ProductDetail from "../components/Products/Detail";
 import Reviews from "../components/Reviews/Reviews";
 import appContext from "../context/context";
 function ProductDetailPage() {
-  const { fetchSingleBicycleById } = useContext(appContext);
+  const { fetchSingleBicycleById, fetchAllReviews } = useContext(appContext);
   const { id } = useParams();
   const history = useHistory();
+
   useEffect(() => {
     fetchSingleBicycleById(id, history);
+    fetchAllReviews(null, id);
   }, []);
 
   return (

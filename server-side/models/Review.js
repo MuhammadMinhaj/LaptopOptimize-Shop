@@ -1,5 +1,4 @@
 const { model, Schema } = require("mongoose");
-const shortid = require("shortid");
 
 const strTypeRequiredField = {
   type: String,

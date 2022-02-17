@@ -1,8 +1,8 @@
-const Bicycle = require("../models/Bicycle");
+const Bicycle = require("../models/Product");
 const Review = require("../models/Review");
 
 // Get single bicycle
-exports.getSingleBicycleGetController = async (req, res) => {
+exports.getSingleProductGetController = async (req, res) => {
   const { id } = req.params;
   try {
     const bicycle = await Bicycle.findOne({ _id: id });
@@ -12,7 +12,7 @@ exports.getSingleBicycleGetController = async (req, res) => {
   }
 };
 // Get all bicycle
-exports.getAllBicycleGetController = async (req, res) => {
+exports.getAllProductGetController = async (req, res) => {
   try {
     const bicycles = await Bicycle.find();
 
@@ -22,7 +22,7 @@ exports.getAllBicycleGetController = async (req, res) => {
   }
 };
 // Only admin bicycle can be adding and this controller is only accessible to admin
-exports.addBicyclePostController = async (req, res) => {
+exports.addProductPostController = async (req, res) => {
   // Data extracted from the body of the request
   const { name, price, model, stockStatus, description, features, img } =
     req.body;
@@ -62,7 +62,7 @@ exports.addBicyclePostController = async (req, res) => {
   }
 };
 // To update bicycle data by admin
-exports.updateBicyclePutController = async (req, res) => {
+exports.updateProductPutController = async (req, res) => {
   // Data extracted from the body of the request and also exracted id from params
   const { name, price, model, stockStatus, description, features, img } =
     req.body;
@@ -98,7 +98,7 @@ exports.updateBicyclePutController = async (req, res) => {
   }
 };
 // To delete bicycle from the DB by admin
-exports.deleteBicycleDeleteController = async (req, res) => {
+exports.deleteProductDeleteController = async (req, res) => {
   const { id } = req.params;
   try {
     const hasBicycle = await Bicycle.findOne({ _id: id });

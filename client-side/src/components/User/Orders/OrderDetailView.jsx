@@ -91,7 +91,7 @@ export default function OrderDetailView({ open, handleToggle, order }) {
         <Button
           startIcon={<VisibilityIcon />}
           color="primary"
-          onClick={() => history.push(`/bicycles/${order?.bicycle?._id}`)}
+          onClick={() => history.push(`/store/${order?.bicycle?._id}`)}
         >
           View This Product On Website
         </Button>

@@ -51,7 +51,7 @@ export default function BasicMenu({ handleClose, anchorEl, open }) {
       )}
 
       {isLoggedIn && (
-        <MenuItem onClick={() => history.push("/bicycles")} divider>
+        <MenuItem onClick={() => history.push("/store")} divider>
           Manage Product
         </MenuItem>
       )}

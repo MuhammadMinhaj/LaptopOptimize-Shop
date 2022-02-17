@@ -35,9 +35,9 @@ function UserProfilePage() {
                 path="/"
               />
               <Item
-                name="Browse Bicycles"
+                name="Browse Store"
                 icon={<DirectionsBike style={iconStyle} />}
-                path="/bicycles"
+                path="/store"
               />
               <Item
                 name="My Orders"

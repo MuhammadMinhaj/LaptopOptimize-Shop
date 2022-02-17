@@ -1,4 +1,4 @@
-const bicycleRoutes = require("./bicycle");
+const bicycleRoutes = require("./product");
 const orderRoutes = require("./order");
 const adminRoutes = require("./admin");
 const reviewRoutes = require("./review");

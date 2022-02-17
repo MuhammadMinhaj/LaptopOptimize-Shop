@@ -1,26 +1,20 @@
 import { Box, Divider, Typography } from "@mui/material";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import appContext from "../../context/context";
 import Container from "../Common/Container";
-// import Title from "../Common/Title";
 import Review from "./Review";
 
-const Reviews = ({ title, id }) => {
+const Reviews = ({ id }) => {
   const {
     state: { reviews },
     fetchAllReviews,
   } = useContext(appContext);
 
-  useEffect(() => {
-    fetchAllReviews(id);
-  }, []);
+  // useEffect(() => {
+  //   fetchAllReviews(id);
+  // }, []);
   return (
     <Box py="4rem">
-      {/* <Title
-        fTitle="Customers"
-        lTitle={title || "Reviews"}
-        subTitle="See what our customers are saying about our service!"
-      /> */}
       <Container>
         <Typography p="1rem" variant="h6" color="text.secondary">
           Reviews :{" "}

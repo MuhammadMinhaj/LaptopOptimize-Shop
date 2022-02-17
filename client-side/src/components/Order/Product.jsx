@@ -4,29 +4,29 @@ import { useContext } from "react";
 import appContext from "../../context/context";
 import Container from "../Common/Container";
 
-const Bicycle = () => {
+const Product = () => {
   const {
-    state: { orderBicycleQuantity, singleBicycle },
+    state: { orderProductQuantity, singleProduct },
     handleChangeOrderQuantity,
     setAlertMessage,
   } = useContext(appContext);
 
   const increaseQty = () => {
-    handleChangeOrderQuantity(orderBicycleQuantity + 1);
+    handleChangeOrderQuantity(orderProductQuantity + 1);
   };
   const decreaseQty = () => {
-    if (orderBicycleQuantity === 1) {
+    if (orderProductQuantity === 1) {
       setAlertMessage("info", "At least one quantity of food for an order");
       return;
     }
-    handleChangeOrderQuantity(orderBicycleQuantity - 1);
+    handleChangeOrderQuantity(orderProductQuantity - 1);
   };
   const getDesc = () => {
-    if (singleBicycle?.description) {
-      if (singleBicycle.description.length > 3) {
-        return singleBicycle.description.slice(0, 100) + "...";
+    if (singleProduct?.description) {
+      if (singleProduct.description.length > 3) {
+        return singleProduct.description.slice(0, 100) + "...";
       } else {
-        return singleBicycle.description;
+        return singleProduct.description;
       }
     }
   };
@@ -39,7 +39,7 @@ const Bicycle = () => {
               component="img"
               width="100%"
               height="auto"
-              src={singleBicycle?.img}
+              src={singleProduct?.img}
             />
           </Grid>
           <Grid item md={7}>
@@ -51,10 +51,10 @@ const Bicycle = () => {
             >
               <Box py="0.5rem">
                 <Typography variant="subtitle1" color="text.secondary">
-                  Model : {singleBicycle?.model || "N/A"}
+                  Model : {singleProduct?.model || "N/A"}
                 </Typography>
                 <Typography variant="h4">
-                  {singleBicycle?.name || "N/A"}
+                  {singleProduct?.name || "N/A"}
                 </Typography>
               </Box>
               <Divider />
@@ -68,7 +68,7 @@ const Bicycle = () => {
                   py="0.5rem"
                 >
                   {" "}
-                  {singleBicycle?._id || "N/A"}
+                  {singleProduct?._id || "N/A"}
                 </Typography>
               </Typography>
 
@@ -82,7 +82,7 @@ const Bicycle = () => {
                   align="right"
                 >
                   {" "}
-                  {singleBicycle?.price || "N/A"}
+                  {singleProduct?.price || "N/A"}
                   {"$"}
                 </Typography>
               </Typography>
@@ -108,7 +108,7 @@ const Bicycle = () => {
                   py="0.5rem"
                   align="right"
                 >
-                  {orderBicycleQuantity}
+                  {orderProductQuantity}
                 </Typography>
                 <IconButton color="inherit" onClick={decreaseQty}>
                   <RemoveIcon />
@@ -121,4 +121,4 @@ const Bicycle = () => {
     </Container>
   );
 };
-export default Bicycle;
+export default Product;

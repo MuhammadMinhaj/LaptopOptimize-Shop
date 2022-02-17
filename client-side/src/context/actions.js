@@ -4,12 +4,12 @@ const {
   APP_CLOSE_ALERT_MESSAGE,
   SET_LOADING_STATUS,
   SET_ADMIN_LOGGED_IN,
-  FETCH_BICYCLES_DATA_SUCCESS,
-  FETCH_SINGLE_BICYCLE_DATA_SUCCESS,
-  ADD_BICYCLE_SUCCESS,
-  UPDATE_BICYCLE_SUCCESS,
-  DELETE_BICYCLE_SUCCESS,
-  USER_CHANGE_BICYCLE_QUANTITY,
+  FETCH_PRODUCTS_DATA_SUCCESS,
+  FETCH_SINGLE_PRODUCT_DATA_SUCCESS,
+  ADD_PRODUCT_SUCCESS,
+  UPDATE_PRODUCT_SUCCESS,
+  DELETE_PRODUCT_SUCCESS,
+  USER_CHANGE_PRODUCT_QUANTITY,
   USER_ORDER_CONFIRM_SUCCESS,
   FETCH_USER_ORDERS_SUCCESS,
   ORDER_DELETE_SUCCESS,
@@ -200,7 +200,7 @@ const main = (dispatch) => {
       const data = await res.json();
       if (res.status === 200) {
         dispatch({
-          type: FETCH_BICYCLES_DATA_SUCCESS,
+          type: FETCH_PRODUCTS_DATA_SUCCESS,
           payload: data.bicycles,
         });
       }
@@ -236,7 +236,7 @@ const main = (dispatch) => {
 
       if (res.status === 200) {
         dispatch({
-          type: FETCH_SINGLE_BICYCLE_DATA_SUCCESS,
+          type: FETCH_SINGLE_PRODUCT_DATA_SUCCESS,
           payload: data.bicycle,
         });
       } else {
@@ -312,7 +312,7 @@ const main = (dispatch) => {
       const data = await res.json();
       if (res.status === 201) {
         dispatch({
-          type: ADD_BICYCLE_SUCCESS,
+          type: ADD_PRODUCT_SUCCESS,
           payload: data.bicycle,
         });
       }
@@ -395,7 +395,7 @@ const main = (dispatch) => {
 
       if (res.status === 200) {
         dispatch({
-          type: UPDATE_BICYCLE_SUCCESS,
+          type: UPDATE_PRODUCT_SUCCESS,
           payload: data.bicycle,
         });
       }
@@ -442,7 +442,7 @@ const main = (dispatch) => {
 
       if (res.status === 200) {
         dispatch({
-          type: DELETE_BICYCLE_SUCCESS,
+          type: DELETE_PRODUCT_SUCCESS,
           payload: id,
         });
       }
@@ -475,7 +475,7 @@ const main = (dispatch) => {
   // Change Order Quantity By User
   methods.handleChangeOrderQuantity = (qty) => {
     dispatch({
-      type: USER_CHANGE_BICYCLE_QUANTITY,
+      type: USER_CHANGE_PRODUCT_QUANTITY,
       payload: qty,
     });
   };
@@ -713,13 +713,15 @@ const main = (dispatch) => {
   };
 
   // Fetch all reviews
-  methods.fetchAllReviews = async (uid) => {
+  methods.fetchAllReviews = async (uid, prodId) => {
     try {
       dispatch({
         type: SET_LOADING_STATUS,
         payload: true,
       });
-      const reviewUrl = uid ? `/api/review?uid=${uid}` : "/api/review";
+      const reviewUrl = uid
+        ? `/api/review?uid=${uid}`
+        : `/api/review?prodId=${prodId}`;
       const res = await fetch(`${API_ROOT_URL}${reviewUrl}`, {
         method: "GET",
       });

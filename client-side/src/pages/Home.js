@@ -5,7 +5,7 @@ import Category from "../components/Category/Category";
 import Title from "../components/Common/Title";
 import Fqas from "../components/FQAS/FQAS";
 import Products from "../components/Products/Products";
-import Reviews from "../components/Reviews/Reviews";
+// import Reviews from "../components/Reviews/Reviews";
 import Slider from "../components/Slider/Slider";
 import StaticInfo from "../components/StaticInfo/StaticInfo";
 import Testimonials from "../components/Testimonials/Testimonials.jsx";
@@ -50,15 +50,15 @@ function Home() {
       </Box>
 
       <Box py="2rem">
-        <StaticInfo />
-      </Box>
-      <Box py="2rem">
         <Testimonials />
       </Box>
-      <Reviews />
+      {/* <Reviews /> */}
 
       <Box py="2rem">
         <Fqas />
+      </Box>
+      <Box py="2rem" bgcolor="var(--primary-deep)">
+        <StaticInfo />
       </Box>
     </main>
   );

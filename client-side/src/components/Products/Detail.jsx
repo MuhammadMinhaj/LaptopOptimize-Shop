@@ -88,7 +88,7 @@ const BicycleDetail = () => {
         variant="h4"
         align="center"
       >
-        Write a review about this cycle
+        Write a review
       </Typography>
       <ReviewBox bicycle={singleBicycle?._id} />
     </Container>

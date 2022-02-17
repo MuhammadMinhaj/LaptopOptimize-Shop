@@ -2,7 +2,7 @@ import { Box, Divider, Typography } from "@mui/material";
 import { useContext, useEffect } from "react";
 import appContext from "../../context/context";
 import Container from "../Common/Container";
-import Title from "../Common/Title";
+// import Title from "../Common/Title";
 import Review from "./Review";
 
 const Reviews = ({ title, id }) => {
@@ -16,29 +16,27 @@ const Reviews = ({ title, id }) => {
   }, []);
   return (
     <Box py="4rem">
-      <Title
+      {/* <Title
         fTitle="Customers"
         lTitle={title || "Reviews"}
         subTitle="See what our customers are saying about our service!"
-      />
+      /> */}
       <Container>
-        <Box boxShadow={2}>
-          <Typography p="1rem" variant="h6" color="text.secondary">
-            Total Reviews :{" "}
-            <Typography component="span" variant="h6" color="var(--primary)">
-              {reviews.length}
-            </Typography>
+        <Typography p="1rem" variant="h6" color="text.secondary">
+          Reviews :{" "}
+          <Typography component="span" variant="h6" color="var(--primary)">
+            {reviews.length}
           </Typography>
-          <Divider />
-          <Box p="1rem" maxHeight="700px" overflow="auto">
-            {reviews?.map((review, i) => (
-              <Review
-                key={review._id}
-                review={review}
-                borderNone={reviews.length - 1 === i}
-              />
-            ))}
-          </Box>
+        </Typography>
+        <Divider />
+        <Box p="1rem" maxHeight="700px" overflow="auto">
+          {reviews?.map((review, i) => (
+            <Review
+              key={review._id}
+              review={review}
+              borderNone={reviews.length - 1 === i}
+            />
+          ))}
         </Box>
       </Container>
     </Box>

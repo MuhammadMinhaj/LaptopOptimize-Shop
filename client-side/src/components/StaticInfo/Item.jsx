@@ -8,13 +8,10 @@ const Item = ({ title, description, icon }) => {
       <Box display="flex" width="100%" alignItems="center">
         <Box pr="0.5rem">{icon}</Box>
         <Box>
-          <Typography variant={isSM ? "h5" : "h4"} color="var(--primary)">
+          <Typography variant={isSM ? "h5" : "h4"} color="var(--white)">
             {title}
           </Typography>
-          <Typography
-            variant={isSM ? "subtitle1" : "h6"}
-            color="text.secondary"
-          >
+          <Typography variant={isSM ? "subtitle1" : "h6"} color="#9093a7">
             {description}
           </Typography>
         </Box>

@@ -194,7 +194,7 @@ const main = (dispatch) => {
       payload: true,
     });
     try {
-      const res = await fetch(`${API_ROOT_URL}/api/bicycle/all`, {
+      const res = await fetch(`${API_ROOT_URL}/api/product/all`, {
         method: "GET",
       });
       const data = await res.json();
@@ -229,7 +229,7 @@ const main = (dispatch) => {
       payload: true,
     });
     try {
-      const res = await fetch(`${API_ROOT_URL}/api/bicycle/single/${id}`, {
+      const res = await fetch(`${API_ROOT_URL}/api/product/single/${id}`, {
         methods: "GET",
       });
       const data = await res.json();
@@ -293,7 +293,7 @@ const main = (dispatch) => {
       payload: true,
     });
     try {
-      const res = await fetch(`${API_ROOT_URL}/api/bicycle/add`, {
+      const res = await fetch(`${API_ROOT_URL}/api/product/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -375,7 +375,7 @@ const main = (dispatch) => {
       payload: true,
     });
     try {
-      const res = await fetch(`${API_ROOT_URL}/api/bicycle/update/${_id}`, {
+      const res = await fetch(`${API_ROOT_URL}/api/product/update/${_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -431,7 +431,7 @@ const main = (dispatch) => {
       payload: true,
     });
     try {
-      const res = await fetch(`${API_ROOT_URL}/api/bicycle/delete/${id}`, {
+      const res = await fetch(`${API_ROOT_URL}/api/product/delete/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

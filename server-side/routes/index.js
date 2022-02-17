@@ -4,7 +4,7 @@ const adminRoutes = require("./admin");
 const reviewRoutes = require("./review");
 const paths = [
   {
-    path: "bicycle",
+    path: "product",
     controller: bicycleRoutes,
   },
   {

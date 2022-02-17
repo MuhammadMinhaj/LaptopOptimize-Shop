@@ -12,34 +12,34 @@ const Products = ({ isNone, limit }) => {
       products,
       admin: { isLoggedIn },
     },
-    updateBicycleHandleSubmit,
+    updateProductHandleSubmit,
   } = useContext(appContext);
-  const [bicycle, setBicycle] = useState(null);
+  const [product, setProduct] = useState(null);
   const [open, setOpen] = useState(false);
   const theme = useTheme();
   const isMD = useMediaQuery(theme.breakpoints.down("md"));
   const handleClickUpdateToggle = (fd) => {
     setOpen(!open);
-    setBicycle(fd);
+    setProduct(fd);
   };
   const handleChange = (e) => {
     e.persist();
-    setBicycle({
-      ...bicycle,
+    setProduct({
+      ...product,
       [e.target.name]: e.target.value,
     });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await updateBicycleHandleSubmit(bicycle);
+    await updateProductHandleSubmit(product);
     setOpen(false);
-    setBicycle(null);
+    setProduct(null);
   };
   return (
     <Box>
       <UpdateModal
         open={open}
-        bicycle={bicycle}
+        product={product}
         handleToggle={handleClickUpdateToggle}
         handleSubmit={handleSubmit}
         handleChange={handleChange}
@@ -61,10 +61,10 @@ const Products = ({ isNone, limit }) => {
           {isLoggedIn && !isNone && <AddProduct />}
         </Box>
         <Grid container spacing={2}>
-          {products.slice(0, limit || products.length).map((bicycle) => (
+          {products.slice(0, limit || products.length).map((product) => (
             <Product
-              bicycle={bicycle}
-              key={bicycle._id}
+              product={product}
+              key={product._id}
               handleClickUpdate={handleClickUpdateToggle}
             />
           ))}

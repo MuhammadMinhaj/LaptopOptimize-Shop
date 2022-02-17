@@ -12,7 +12,7 @@ import {
 export default function UpdateModal({
   open,
   handleToggle,
-  bicycle,
+  product,
   handleSubmit,
   handleChange,
 }) {
@@ -35,7 +35,7 @@ export default function UpdateModal({
             fullWidth
             variant="outlined"
             onChange={handleChange}
-            value={bicycle?.name || ""}
+            value={product?.name || ""}
             name="name"
           />
           <TextField
@@ -45,17 +45,17 @@ export default function UpdateModal({
             fullWidth
             variant="outlined"
             onChange={handleChange}
-            value={bicycle?.model || ""}
+            value={product?.model || ""}
             name="model"
           />
           <TextField
             margin="dense"
             id="price"
-            label="bicycle Price"
+            label="Product Price"
             fullWidth
             variant="outlined"
             onChange={handleChange}
-            value={bicycle?.price || ""}
+            value={product?.price || ""}
             name="price"
           />
           <TextField
@@ -65,18 +65,18 @@ export default function UpdateModal({
             fullWidth
             variant="outlined"
             onChange={handleChange}
-            value={bicycle?.stockStatus || ""}
+            value={product?.stockStatus || ""}
             name="stockStatus"
           />
 
           <TextField
             margin="dense"
             id="img"
-            label="bicycle Image URL"
+            label="Product Image URL"
             fullWidth
             variant="outlined"
             onChange={handleChange}
-            value={bicycle?.img || ""}
+            value={product?.img || ""}
             name="img"
           />
           <TextField
@@ -88,7 +88,7 @@ export default function UpdateModal({
             rows={2}
             variant="outlined"
             onChange={handleChange}
-            value={bicycle?.features || ""}
+            value={product?.features || ""}
             name="features"
           />
           <TextField
@@ -100,7 +100,7 @@ export default function UpdateModal({
             rows={4}
             variant="outlined"
             onChange={handleChange}
-            value={bicycle?.description || ""}
+            value={product?.description || ""}
             name="description"
           />
         </DialogContent>

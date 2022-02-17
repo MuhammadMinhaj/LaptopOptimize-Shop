@@ -19,14 +19,14 @@ export default function AddModal({ open, handleToggle }) {
   const imgRef = useRef();
   const featuresRef = useRef();
   const descriptionRef = useRef();
-  const { addBicycleHandleSubmit } = useContext(appContext);
+  const { addProductHandleSubmit } = useContext(appContext);
 
   const getValue = (x) => x.current.value;
   const handleSubmitForm = async (e) => {
     e.preventDefault();
     handleToggle();
 
-    await addBicycleHandleSubmit({
+    await addProductHandleSubmit({
       name: getValue(nameRef),
       price: getValue(price),
       model: getValue(modelRef),
@@ -43,14 +43,14 @@ export default function AddModal({ open, handleToggle }) {
       open={open}
       onClose={handleToggle}
     >
-      <DialogTitle> Add Bicycle</DialogTitle>
+      <DialogTitle> Add Product</DialogTitle>
       <Divider />
       <DialogContent>
         <TextField
           autoFocus
           margin="dense"
           id="name"
-          label="Bicycle Name"
+          label="Product Name"
           fullWidth
           variant="outlined"
           inputRef={nameRef}
@@ -66,7 +66,7 @@ export default function AddModal({ open, handleToggle }) {
         <TextField
           margin="dense"
           id="price"
-          label="Bicycle Price"
+          label="Product Price"
           fullWidth
           variant="outlined"
           inputRef={price}
@@ -83,7 +83,7 @@ export default function AddModal({ open, handleToggle }) {
         <TextField
           margin="dense"
           id="img"
-          label="Bicycle Image URL"
+          label="Product Image URL"
           fullWidth
           variant="outlined"
           inputRef={imgRef}

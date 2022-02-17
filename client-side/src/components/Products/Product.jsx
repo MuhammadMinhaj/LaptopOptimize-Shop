@@ -18,7 +18,7 @@ import { useHistory } from "react-router-dom";
 import appContext from "../../context/context";
 import ConfirmAlert from "../Common/ConfirmAlert";
 import Features from "./Features";
-const Product = ({ bicycle, handleClickUpdate }) => {
+const Product = ({ product, handleClickUpdate }) => {
   const {
     state: {
       admin: { isLoggedIn },
@@ -28,33 +28,33 @@ const Product = ({ bicycle, handleClickUpdate }) => {
   const history = useHistory();
   const [open, setOpen] = useState(false);
   const handleClickDetail = () => {
-    history.push(`/store/${bicycle._id}`);
+    history.push(`/store/${product._id}`);
   };
   const handleClickOrder = () => {
-    history.push(`/order/${bicycle._id}`);
+    history.push(`/order/${product._id}`);
   };
   const handleClickDeleteToggle = () => {
     setOpen(!open);
   };
   const handleClickDeleteFood = async () => {
-    await deleteBicycleHandleSubmit(bicycle._id);
+    await deleteBicycleHandleSubmit(product._id);
     setOpen(false);
   };
   const handleClickEdit = () => {
-    handleClickUpdate(bicycle);
+    handleClickUpdate(product);
   };
 
   return (
     <Grid item xs={12} sm={6} md={3}>
       <ConfirmAlert
         open={open}
-        msg="bicycle"
+        msg="product"
         handleClose={handleClickDeleteToggle}
         handleSubmit={handleClickDeleteFood}
       />
       <Box boxShadow={1} height="100%" overflow="hidden" borderRadius="1rem">
-        <CardActionArea onClick={() => history.push(`/store/${bicycle._id}`)}>
-          <Box component="img" width="100%" height="300px" src={bicycle.img} />
+        <CardActionArea onClick={() => history.push(`/store/${product._id}`)}>
+          <Box component="img" width="100%" height="300px" src={product.img} />
         </CardActionArea>
         <Box p="0.5rem">
           <Box py="0.5rem">
@@ -63,16 +63,16 @@ const Product = ({ bicycle, handleClickUpdate }) => {
             </Typography>
 
             <Box display="flex" justifyContent="space-between">
-              <Typography variant="h6">{bicycle.name}</Typography>
+              <Typography variant="h6">{product.name}</Typography>
             </Box>
           </Box>
 
-          <Features features={bicycle?.features} />
+          <Features features={product?.features} />
           <Box>
             <Divider />
             <Box textAlign="center" py="0.5rem">
               <Typography variant="h6" color="var(--secondary)">
-                {bicycle.price}৳
+                {product.price}৳
               </Typography>
             </Box>
             <Box

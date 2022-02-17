@@ -222,8 +222,8 @@ const main = (dispatch) => {
       });
     }
   };
-  // Fetch Single bicycle
-  methods.fetchSingleBicycleById = async (id, history) => {
+  // Fetch Single product
+  methods.fetchSingleProductById = async (id, history) => {
     dispatch({
       type: SET_LOADING_STATUS,
       payload: true,
@@ -260,8 +260,8 @@ const main = (dispatch) => {
       });
     }
   };
-  // Add bicycle by Admin
-  methods.addBicycleHandleSubmit = async ({
+  // Add product by Admin
+  methods.addProductHandleSubmit = async ({
     name,
     price,
     model,
@@ -283,7 +283,7 @@ const main = (dispatch) => {
         type: APP_SET_ALERT_MESSAGE,
         payload: {
           status: "warning",
-          message: "Please provide the all required fields to add a bicycle",
+          message: "Please provide the all required fields to add a product",
         },
       });
       return;
@@ -341,8 +341,8 @@ const main = (dispatch) => {
       });
     }
   };
-  // Update bicycle by Admin
-  methods.updateBicycleHandleSubmit = async ({
+  // Update product by Admin
+  methods.updateProductHandleSubmit = async ({
     name,
     price,
     model,
@@ -365,7 +365,7 @@ const main = (dispatch) => {
         type: APP_SET_ALERT_MESSAGE,
         payload: {
           status: "warning",
-          message: "Please prov_e the all required fields to add a bicycle",
+          message: "Please prov_e the all required fields to add a product",
         },
       });
       return;
@@ -424,7 +424,7 @@ const main = (dispatch) => {
       });
     }
   };
-  // Delete bicycle by Admin
+  // Delete product by Admin
   methods.deleteBicycleHandleSubmit = async (id) => {
     dispatch({
       type: SET_LOADING_STATUS,
@@ -479,7 +479,7 @@ const main = (dispatch) => {
       payload: qty,
     });
   };
-  // bicycle Order By User
+  // product Order By User
   methods.handleSubmitOrderBicycle = async (
     { fullname, address, phone, email, bicycle, quantity },
     history
@@ -490,7 +490,7 @@ const main = (dispatch) => {
         payload: {
           status: "warning",
           message:
-            "Please provide all required fields to confirm the order of a bicycle",
+            "Please provide all required fields to confirm the order of a product",
         },
       });
       return;

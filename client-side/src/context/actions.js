@@ -187,8 +187,8 @@ const main = (dispatch) => {
     });
   };
 
-  // Fetch bicycles Data
-  methods.fetchBicyclesData = async () => {
+  // Fetch products Data
+  methods.fetchProductsData = async () => {
     dispatch({
       type: SET_LOADING_STATUS,
       payload: true,
@@ -201,7 +201,7 @@ const main = (dispatch) => {
       if (res.status === 200) {
         dispatch({
           type: FETCH_PRODUCTS_DATA_SUCCESS,
-          payload: data.bicycles,
+          payload: data.products,
         });
       }
       dispatch({
@@ -237,7 +237,7 @@ const main = (dispatch) => {
       if (res.status === 200) {
         dispatch({
           type: FETCH_SINGLE_PRODUCT_DATA_SUCCESS,
-          payload: data.bicycle,
+          payload: data.product,
         });
       } else {
         history.push("/");
@@ -313,7 +313,7 @@ const main = (dispatch) => {
       if (res.status === 201) {
         dispatch({
           type: ADD_PRODUCT_SUCCESS,
-          payload: data.bicycle,
+          payload: data.product,
         });
       }
       dispatch({
@@ -396,7 +396,7 @@ const main = (dispatch) => {
       if (res.status === 200) {
         dispatch({
           type: UPDATE_PRODUCT_SUCCESS,
-          payload: data.bicycle,
+          payload: data.product,
         });
       }
       dispatch({
@@ -481,7 +481,7 @@ const main = (dispatch) => {
   };
   // product Order By User
   methods.handleSubmitOrderBicycle = async (
-    { fullname, address, phone, email, bicycle, quantity },
+    { fullname, address, phone, email, product, quantity },
     history
   ) => {
     if (!fullname || !address || !phone || !email) {
@@ -510,7 +510,7 @@ const main = (dispatch) => {
           address,
           phone,
           email,
-          bicycle,
+          product,
           quantity,
         }),
       });
@@ -756,11 +756,11 @@ const main = (dispatch) => {
     name,
     description,
     ratings,
-    bicycle,
+    product,
     uid,
     img,
   }) => {
-    if (!name || !description || !bicycle || !ratings || !uid) {
+    if (!name || !description || !product || !ratings || !uid) {
       dispatch({
         type: APP_SET_ALERT_MESSAGE,
         payload: {
@@ -785,7 +785,7 @@ const main = (dispatch) => {
           name,
           description,
           ratings,
-          bicycle,
+          product,
           img,
         }),
       });

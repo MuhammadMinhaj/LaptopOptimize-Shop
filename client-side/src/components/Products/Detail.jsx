@@ -98,7 +98,7 @@ const ProductDetail = () => {
       >
         Write a review
       </Typography>
-      <ReviewBox bicycle={singleProduct?._id} />
+      <ReviewBox product={singleProduct?._id} />
     </Container>
   );
 };

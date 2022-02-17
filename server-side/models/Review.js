@@ -13,9 +13,9 @@ const schema = new Schema({
     type: Number,
     required: true,
   },
-  bicycle: {
+  product: {
     type: Schema.Types.String,
-    ref: "Bicycle",
+    ref: "Product",
   },
   uid: strTypeRequiredField,
 });

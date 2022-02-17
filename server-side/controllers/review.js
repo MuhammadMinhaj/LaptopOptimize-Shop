@@ -1,5 +1,5 @@
 const Review = require("../models/Review");
-const Bicycle = require("../models/Product");
+const Product = require("../models/Product");
 // Get reviews
 exports.getReviewsGetController = async (req, res) => {
   const { uid, prodId } = req.query;
@@ -9,13 +9,13 @@ exports.getReviewsGetController = async (req, res) => {
 
     if (uid) {
       reviews = await Review.find({ uid }).populate({
-        path: "bicycle",
+        path: "product",
         select: "name img",
       });
     }
     if (prodId) {
-      reviews = await Review.find({ bicycle: prodId }).populate({
-        path: "bicycle",
+      reviews = await Review.find({ product: prodId }).populate({
+        path: "product",
         select: "name img",
       });
     }
@@ -29,33 +29,33 @@ exports.getReviewsGetController = async (req, res) => {
 // To add the review data by user
 exports.addReviewPostController = async (req, res) => {
   // Data extracted from the body of the request
-  const { img, name, description, ratings, bicycle } = req.body;
+  const { img, name, description, ratings, product } = req.body;
   const { uid } = req.params;
   // Simple validation for input data
-  if (!name || !description || !ratings || !bicycle) {
+  if (!name || !description || !ratings || !product) {
     return res.status(403).json({
       message: "Must have to provide all required fields to add a review",
     });
   }
-  const hasBicycle = await Bicycle.findOne({ _id: bicycle });
+  const hasBicycle = await Product.findOne({ _id: product });
   if (!hasBicycle) {
     return res.status(404).json({
       message: "This item is not available in DB",
     });
   }
   try {
-    const hasReview = await Review.findOne({ uid, bicycle });
+    const hasReview = await Review.findOne({ uid, product });
     if (hasReview) {
       return res
         .status(403)
-        .json({ message: "You have already rated this bicycle" });
+        .json({ message: "You have already rated this product" });
     }
     const addReview = new Review({
       img: img || "",
       name,
       description,
       ratings,
-      bicycle,
+      product,
       uid,
     });
     const addedReview = await addReview.save();
@@ -67,7 +67,7 @@ exports.addReviewPostController = async (req, res) => {
       4: "four",
       5: "five",
     };
-    await Bicycle.findOneAndUpdate(
+    await Product.findOneAndUpdate(
       { _id: hasBicycle._id },
       {
         ratings: {

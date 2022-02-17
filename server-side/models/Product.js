@@ -33,6 +33,6 @@ const schema = new Schema({
   },
 });
 
-const Product = new model("Bicycle", schema);
+const Product = new model("Product", schema);
 
 module.exports = Product;

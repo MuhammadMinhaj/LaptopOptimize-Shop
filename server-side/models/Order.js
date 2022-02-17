@@ -25,7 +25,7 @@ const schema = new Schema({
     type: Number,
     default: 1,
   },
-  bicycle: { type: Schema.Types.String, ref: "Bicycle" },
+  product: { type: Schema.Types.String, ref: "Product" },
 });
 const Order = new model("Order", schema);
 

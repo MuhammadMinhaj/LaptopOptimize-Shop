@@ -12,10 +12,10 @@ import Testimonials from "../components/Testimonials/Testimonials.jsx";
 import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs";
 import appContext from "../context/context";
 function Home() {
-  const { fetchBicyclesData } = useContext(appContext);
+  const { fetchProductsData } = useContext(appContext);
   const history = useHistory();
   useEffect(() => {
-    fetchBicyclesData();
+    fetchProductsData();
   }, []);
   return (
     <main>

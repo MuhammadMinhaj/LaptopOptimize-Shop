@@ -29,11 +29,11 @@ export default function OrderDetailView({ open, handleToggle, order }) {
           component="img"
           width="100%"
           height="350px"
-          src={order?.bicycle?.img}
+          src={order?.product?.img}
         />
 
         <Typography variant="h4" py="0.5rem">
-          {order?.bicycle?.name || "N/A"}
+          {order?.product?.name || "N/A"}
         </Typography>
         <Divider />
 
@@ -46,7 +46,7 @@ export default function OrderDetailView({ open, handleToggle, order }) {
             py="0.5rem"
           >
             {" "}
-            {order?.bicycle?._id || "N/A"}
+            {order?.product?._id || "N/A"}
           </Typography>
         </Typography>
 
@@ -60,7 +60,7 @@ export default function OrderDetailView({ open, handleToggle, order }) {
             align="right"
           >
             {" "}
-            {order?.bicycle?.price || "N/A"}
+            {order?.product?.price || "N/A"}
             {"$"}
           </Typography>
         </Typography>
@@ -81,7 +81,7 @@ export default function OrderDetailView({ open, handleToggle, order }) {
         <ListItem name="Quantity" desc={order?.quantity || "N/A"} />
         <ListItem
           name="Total Price"
-          desc={order?.quantity * order?.bicycle?.price || "N/A"}
+          desc={order?.quantity * order?.product?.price || "N/A"}
           isNoneDivider
         />
       </DialogContent>
@@ -90,7 +90,7 @@ export default function OrderDetailView({ open, handleToggle, order }) {
         <Button
           startIcon={<VisibilityIcon />}
           color="primary"
-          onClick={() => history.push(`/store/${order?.bicycle?._id}`)}
+          onClick={() => history.push(`/store/${order?.product?._id}`)}
         >
           View This Product On Website
         </Button>

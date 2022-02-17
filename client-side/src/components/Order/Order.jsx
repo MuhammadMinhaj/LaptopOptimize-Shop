@@ -27,7 +27,7 @@ const Order = () => {
         address: getValue(addressRef),
         phone: getValue(phoneRef),
         email: getValue(emailRef),
-        bicycle: singleProduct._id,
+        product: singleProduct._id,
         quantity: orderProductQuantity,
       },
       history

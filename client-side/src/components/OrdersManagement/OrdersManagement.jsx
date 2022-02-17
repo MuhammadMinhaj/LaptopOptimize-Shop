@@ -112,9 +112,9 @@ export default function Orders() {
                     key={order?._id}
                   >
                     <TableCell>
-                      <Image img={order?.bicycle?.img} />
+                      <Image img={order?.product?.img} />
                     </TableCell>
-                    <TableCell>{order?.bicycle?.name}</TableCell>
+                    <TableCell>{order?.product?.name}</TableCell>
                     <TableCell>
                       <Typography variant="subtitle2" color="text.secondary">
                         Price :{" "}
@@ -123,7 +123,7 @@ export default function Orders() {
                           variant="subtitle2"
                           color="var(--primary)"
                         >
-                          {order?.bicycle?.price || "N/A"}
+                          {order?.product?.price || "N/A"}
                         </Typography>
                       </Typography>
 
@@ -134,7 +134,7 @@ export default function Orders() {
                           variant="subtitle2"
                           color="var(--primary)"
                         >
-                          {order?.quantity * order?.bicycle?.price || "N/A"}
+                          {order?.quantity * order?.product?.price || "N/A"}
                         </Typography>
                       </Typography>
                     </TableCell>

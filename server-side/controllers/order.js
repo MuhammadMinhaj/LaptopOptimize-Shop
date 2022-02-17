@@ -1,12 +1,12 @@
 const Order = require("../models/Order");
-const Bicycle = require("../models/Product");
+const Product = require("../models/Product");
 
 // Get orders by user email
 exports.getUserOrdersGetController = async (req, res) => {
   try {
     const { email } = req.query;
     const orders = await Order.find({ email }).populate({
-      path: "bicycle",
+      path: "product",
       select: "name price img model",
     });
     res.status(200).json({ orders });
@@ -18,7 +18,7 @@ exports.getUserOrdersGetController = async (req, res) => {
 exports.getAllOrdersGetController = async (req, res) => {
   try {
     const orders = await Order.find().populate({
-      path: "bicycle",
+      path: "product",
       select: "name price img model",
     });
 
@@ -30,19 +30,19 @@ exports.getAllOrdersGetController = async (req, res) => {
 // Order confirm by user
 exports.orderPostController = async (req, res) => {
   // Data extracted from the body of the request
-  const { fullname, address, phone, email, bicycle, quantity } = req.body;
+  const { fullname, address, phone, email, product, quantity } = req.body;
   try {
-    const hasBicycle = await Bicycle.find({ _id: bicycle });
+    const hasBicycle = await Product.find({ _id: product });
     if (hasBicycle.length === 0) {
       return res.status(503).json({
         message:
-          "Unable to confirm order because this bicycle is not exist in our stock!",
+          "Unable to confirm order because this product is not exist in our stock!",
       });
     }
     // A Simple validation for input data
     if (!fullname || !address || !phone || !email) {
       return res.status(403).json({
-        message: "Must have to provide all required fields to add a bicycle",
+        message: "Must have to provide all required fields to add a product",
       });
     }
     // Order save to DB
@@ -52,7 +52,7 @@ exports.orderPostController = async (req, res) => {
       address,
       phone,
       email,
-      bicycle,
+      product,
       quantity,
     });
     const confirmedOrder = await confirmOrder.save();

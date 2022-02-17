@@ -5,9 +5,9 @@ import Bicycles from "../components/Products/Products";
 import appContext from "../context/context";
 
 function Store() {
-  const { fetchBicyclesData } = useContext(appContext);
+  const { fetchProductsData } = useContext(appContext);
   useEffect(() => {
-    fetchBicyclesData();
+    fetchProductsData();
   }, []);
   return (
     <main>

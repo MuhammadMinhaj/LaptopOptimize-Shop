@@ -23,8 +23,8 @@ const About = () => (
     </Box>
 
     <LinkItem name="About Us" path="/about-us" />
-    <LinkItem name="Find a bicycle" path="/store" />
-    <LinkItem name="Bicycle Reviews" path="/reviews" />
+    <LinkItem name="Find a product" path="/store" />
+    <LinkItem name="Products Reviews" path="/reviews" />
     <LinkItem name="Login" path="/user/login" />
     <LinkItem name="Signup" path="/user/signup" />
     <LinkItem name="FQAS" path="/fqas" />

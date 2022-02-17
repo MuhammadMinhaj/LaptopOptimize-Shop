@@ -12,7 +12,7 @@ import { useContext, useRef, useState } from "react";
 import appContext from "../../context/context";
 import useAuth from "../../hooks/useAuth";
 
-const ReviewBox = ({ bicycle }) => {
+const ReviewBox = ({ product }) => {
   const { user } = useAuth();
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.down("sm"));
@@ -30,7 +30,7 @@ const ReviewBox = ({ bicycle }) => {
       name: user?.displayName,
       description: descriptionRef.current.value,
       ratings,
-      bicycle,
+      product,
       uid: user?.uid,
     });
     descriptionRef.current.value = "";

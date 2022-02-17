@@ -13,8 +13,8 @@ function Store() {
     <main>
       <Box py="2rem">
         <Title
-          fTitle="Products"
-          lTitle="Menu"
+          fTitle="Our"
+          lTitle="Store"
           subTitle="Choose your desire foods"
         />
         <Bicycles />

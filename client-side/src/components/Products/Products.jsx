@@ -2,7 +2,6 @@ import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useContext, useState } from "react";
 import appContext from "../../context/context";
 import Container from "../Common/Container";
-import Title from "../Common/Title";
 import AddProduct from "./AddProduct";
 import Product from "./Product";
 import UpdateModal from "./UpdateModal";
@@ -38,7 +37,6 @@ const Products = ({ isNone, limit }) => {
   };
   return (
     <Box>
-      <Title title="Bicycles" />
       <UpdateModal
         open={open}
         bicycle={bicycle}
@@ -54,7 +52,7 @@ const Products = ({ isNone, limit }) => {
           alignItems="center"
         >
           <Typography py="1rem" variant="h6" color="text.secondary">
-            Total Items :{" "}
+            Total Product :{" "}
             <Typography component="span" variant="h6" color="var(--primary)">
               {bicycles?.length || "N/A"}
             </Typography>

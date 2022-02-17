@@ -5,7 +5,7 @@ import Category from "../components/Category/Category";
 import Title from "../components/Common/Title";
 import CustomerSay from "../components/CustomerSay/CustomerSay";
 import Fqas from "../components/FQAS/FQAS";
-import Bicycles from "../components/Products/Products";
+import Products from "../components/Products/Products";
 import Reviews from "../components/Reviews/Reviews";
 import Slider from "../components/Slider/Slider";
 import StaticInfo from "../components/StaticInfo/StaticInfo";
@@ -21,19 +21,24 @@ function Home() {
     <main>
       <Slider />
       <Box py="4rem">
-        <Title title="Featured category" />
+        <Title fTitle="Featured" lTitle="category" />
         <Category />
       </Box>
 
       <Box py="4rem">
-        <Title title="Why choose us?" />
+        <Title fTitle="Why choose" lTitle="us?" />
         <WhyChooseUs />
       </Box>
       <Box py="2rem">
-        <Bicycles isNone limit={6} />
+        <Title
+          fTitle="Our"
+          lTitle="Store"
+          subTitle="Get the most popular products"
+        />
+        <Products isNone limit={6} />
         <Box color="var(--secondary)" m="auto" maxWidth="400px" py="2rem">
           <Button
-            onClick={() => history.push("/bicycles")}
+            onClick={() => history.push("/store")}
             variant="outlined"
             color="inherit"
             size="large"

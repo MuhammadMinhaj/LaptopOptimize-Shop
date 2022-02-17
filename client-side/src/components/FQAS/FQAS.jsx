@@ -1,4 +1,5 @@
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Box } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -7,7 +8,6 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import Container from "../Common/Container";
 import Title from "../Common/Title";
-// eslint-disable-next-line no-unused-vars
 const questions = [
   {
     question: "Do I need an appointment to come and look at bike?",
@@ -44,7 +44,6 @@ const questions = [
       "Well, you’re asking a lot of questions here, but we’re here to answer your questions, so we pretty much sell everything that will help you enjoy your bike. Some examples in no particular order would include helmets, shoes, gloves, bottles, more clothes than you can shake a stick at, tools, pumps, bags, pedals, saddles, tires, tubes, locks, lubes (for bikes), coffee, and Lemonheads. Actually we don’t sell the coffee and Lemonheads, those are free*. *Price subject to change.",
   },
 ];
-
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -55,28 +54,39 @@ export default function ControlledAccordions() {
   return (
     <Box py="3rem">
       <Container>
-        <Title title="FQAS" />
-
-        {questions.map(({ question, answer }, ind) => (
-          <Accordion
-            expanded={expanded === `panel1-${ind}`}
-            onChange={handleChange(`panel1-${ind}`)}
-            key={question}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={`panel${ind}bh-content`}
-              id={`panel${ind}bh-header`}
+        <Title
+          fTitle="Frequently Asked"
+          lTitle="Questions"
+          subTitle="Know more about our services system"
+        />
+        <Box py="1rem">
+          {questions.map(({ question, answer }, ind) => (
+            <Accordion
+              expanded={expanded === `panel1-${ind}`}
+              onChange={handleChange(`panel1-${ind}`)}
+              key={question}
             >
-              <Typography sx={{ width: "100%", flexShrink: 0 }}>
-                {question}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{answer}</Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
+              <AccordionSummary
+                expandIcon={<ArrowDropDownIcon />}
+                aria-controls={`panel${ind}bh-content`}
+                id={`panel${ind}bh-header`}
+              >
+                <Typography
+                  variant="subtitle1"
+                  sx={{ width: "100%", flexShrink: 0 }}
+                  color="var(--primary-deep)"
+                >
+                  {question}
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography variant="body1" color="text.secondary">
+                  {answer}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </Box>
       </Container>
     </Box>
   );

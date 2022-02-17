@@ -16,7 +16,11 @@ const Reviews = ({ title, id }) => {
   }, []);
   return (
     <Box py="4rem">
-      <Title title={title || "Reviews"} />
+      <Title
+        fTitle="Customers"
+        lTitle={title || "Reviews"}
+        subTitle="See what our customers are saying about our service!"
+      />
       <Container>
         <Box boxShadow={2}>
           <Typography p="1rem" variant="h6" color="text.secondary">

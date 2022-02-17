@@ -6,8 +6,8 @@ import { useState } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import Container from "../Common/Container";
-import customerSays from "./customerSay";
 import Item from "./Item";
+import testimonials from "./testimonials";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 function CustomerSay() {
   const theme = useTheme();
@@ -15,10 +15,10 @@ function CustomerSay() {
 
   const handleStepChange = (step) => {
     if (step < 1) {
-      setActiveStep(customerSays.length - 1);
+      setActiveStep(testimonials.length - 1);
       return;
     }
-    if (step === customerSays.length - 1) {
+    if (step === testimonials.length - 1) {
       setActiveStep(0);
     } else {
       setActiveStep(step);
@@ -63,7 +63,7 @@ function CustomerSay() {
                 onChangeIndex={handleStepChange}
                 enableMouseEvents
               >
-                {customerSays.map((item) => (
+                {testimonials.map((item) => (
                   <>
                     <Item {...item} key={item.title} />
                   </>

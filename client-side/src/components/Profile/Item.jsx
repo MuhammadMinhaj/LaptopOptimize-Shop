@@ -1,10 +1,10 @@
 import { Box, CardActionArea, Grid, Typography } from "@mui/material";
 import { useHistory } from "react-router-dom";
-function Item({ name, icon, path, handleClick }) {
+function Item({ name, icon, path, handleClick, isRow }) {
   const history = useHistory();
   const handleClickChangeRoute = () => history.push(path);
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={isRow ? 12 : 6} md={isRow ? 12 : 4}>
       <Box boxShadow={3} borderRadius="0.75rem" overflow="hidden">
         <CardActionArea onClick={handleClick || handleClickChangeRoute}>
           <Box>

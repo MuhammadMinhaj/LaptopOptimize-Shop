@@ -64,7 +64,7 @@ export default function ImageAvatars({ isAvatar }) {
           p="0.25rem"
           borderRadius="1rem"
         >
-          <Typography color="black" px="0.25rem">
+          <Typography color="var(--white)" px="0.25rem">
             {user.displayName || name}
           </Typography>
 

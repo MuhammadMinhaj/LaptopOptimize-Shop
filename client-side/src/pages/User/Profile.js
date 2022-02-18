@@ -22,8 +22,8 @@ function UserProfilePage() {
             <Profile />
           </Grid>
           <Grid item xs={12} md={8}>
-            <Typography variant="h3" pb="1rem" color="text.secondary">
-              Welcome Back!
+            <Typography variant="h3" pb="1rem" color="var(--neutral)">
+              WELCOME TO DASHBOARD
             </Typography>
             <Divider />
             <br />

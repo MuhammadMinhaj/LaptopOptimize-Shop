@@ -15,7 +15,7 @@ const iconStyle = { color: "inherit", fontSize: "inherit" };
 function UserProfilePage() {
   const history = useHistory();
   const {
-    state: { adminLogout },
+    state: { adminLogout, isLoggedIn },
   } = useContext(appContext);
   return (
     <Box py="4rem">
@@ -25,8 +25,9 @@ function UserProfilePage() {
             <Profile />
           </Grid>
           <Grid item md={8}>
-            <Typography variant="h3" pb="1rem" color="text.secondary">
-              Welcome Back!
+            <Typography variant="h3" pb="1rem" color="var(--neutral)">
+              {/* Welcome to Dashboard */}
+              WELCOME TO DASHBOARD
             </Typography>
             <Divider />
             <br />

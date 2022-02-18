@@ -5,7 +5,7 @@ export default function ImageAvatars({ name, src }) {
   return (
     <Box display="flex" justifyContent="center" pt="0.25rem" pb="0.75rem">
       <Stack direction="row" spacing={2}>
-        <Avatar sx={{ width: 120, height: 120 }} alt={name} src={src} />
+        <Avatar sx={{ width: 80, height: 80 }} alt={name} src={src} />
       </Stack>
     </Box>
   );

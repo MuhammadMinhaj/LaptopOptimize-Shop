@@ -1,3 +1,4 @@
+import LogoutIcon from "@mui/icons-material/Logout";
 import { Box, Button, Divider, Typography } from "@mui/material";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
@@ -5,7 +6,6 @@ import appContext from "../../context/context";
 import useAuth from "../../hooks/useAuth";
 import Container from "../Common/Container";
 import ListItem from "../Common/ListItem";
-import Title from "../Common/Title";
 import Avatar from "./Avater";
 function Profile() {
   const { user, logout } = useAuth();
@@ -25,8 +25,7 @@ function Profile() {
   };
   return (
     <Container>
-      <Title fTitle={isLoggedIn ? "Admin" : "User"} lTitle="Profile" />
-      <Box pt="1rem" boxShadow={2} borderRadius="0.5rem">
+      <Box pt="1rem" boxShadow={1} borderRadius="0.5rem">
         <Box textAlign="center">
           <Avatar
             name={isLoggedIn ? name : user.displayName}
@@ -64,9 +63,9 @@ function Profile() {
 
           <Button
             onClick={handleLogout}
-            variant="outlined"
             color="error"
             fullWidth
+            startIcon={<LogoutIcon />}
           >
             Logout
           </Button>

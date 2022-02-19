@@ -21,7 +21,7 @@ const {
   ADMIN_SIGNUP_SUCCESS,
   DELETE_ADMIN_SUCCESS,
 } = constant;
-const API_ROOT_URL = "http://localhost:8080";
+const API_ROOT_URL = "https://minhaj-laptopoptimize.vercel.app";
 const main = (dispatch) => {
   const methods = {};
 

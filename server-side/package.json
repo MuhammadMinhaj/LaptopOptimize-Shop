@@ -1,12 +1,12 @@
 {
-  "name": "blissful-pedals-server-side",
+  "name": "Laptop Optimize",
   "version": "1.0.0",
   "main": "app.js",
-  "author": "Tanjina Akter",
+  "author": "Muhammad Minhaj",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

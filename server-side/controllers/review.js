@@ -3,6 +3,7 @@ const Product = require("../models/Product");
 // Get reviews
 exports.getReviewsGetController = async (req, res) => {
   const { uid, product } = req.query;
+
   try {
     let reviews = [];
 
@@ -12,11 +13,8 @@ exports.getReviewsGetController = async (req, res) => {
         select: "name img",
       });
     }
-    if (prodId) {
-      reviews = await Review.find({ product }).populate({
-        path: "product",
-        select: "name img",
-      });
+    if (product) {
+      reviews = await Review.find({ product });
     }
     res.status(200).json({ reviews });
   } catch (e) {

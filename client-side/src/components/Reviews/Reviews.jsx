@@ -1,5 +1,5 @@
 import { Box, Divider, Typography } from "@mui/material";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import appContext from "../../context/context";
 import Container from "../Common/Container";
 import Review from "./Review";
@@ -10,9 +10,11 @@ const Reviews = ({ id }) => {
     fetchAllReviews,
   } = useContext(appContext);
 
-  // useEffect(() => {
-  //   fetchAllReviews(id);
-  // }, []);
+  useEffect(() => {
+    if (id) {
+      fetchAllReviews(id, null);
+    }
+  }, [id]);
   return (
     <Box py="4rem">
       <Container>

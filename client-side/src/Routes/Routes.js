@@ -4,7 +4,6 @@ import AlertMessage from "../components/AlertMessage/AlertMessage";
 import fourZeroFour from "../components/Common/404";
 import Loader from "../components/Common/Loader";
 import fqasPage from "../components/FQAS/FQAS";
-import reviewsPage from "../components/Reviews/Reviews";
 import appContext from "../context/context";
 import aboutPage from "../pages/About";
 import ManageAdminPage from "../pages/Admin/ManageAdmin";
@@ -51,10 +50,7 @@ const routes = [
     component: storePage,
     path: "/store",
   },
-  {
-    component: reviewsPage,
-    path: "/reviews",
-  },
+
   {
     component: fqasPage,
     path: "/fqas",

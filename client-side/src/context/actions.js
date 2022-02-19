@@ -714,6 +714,7 @@ const main = (dispatch) => {
 
   // Fetch all reviews
   methods.fetchAllReviews = async (uid, prodId) => {
+    console.log({ uid, prodId });
     try {
       dispatch({
         type: SET_LOADING_STATUS,
@@ -721,7 +722,7 @@ const main = (dispatch) => {
       });
       const reviewUrl = uid
         ? `/api/review?uid=${uid}`
-        : `/api/review?prodId=${prodId}`;
+        : `/api/review?product=${prodId}`;
       const res = await fetch(`${API_ROOT_URL}${reviewUrl}`, {
         method: "GET",
       });

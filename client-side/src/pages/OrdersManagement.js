@@ -5,7 +5,7 @@ import Container from "../components/Common/Container";
 import OrdersManagement from "../components/OrdersManagement/OrdersManagement";
 import appContext from "../context/context";
 const OrderManagementPage = () => {
-  const { fetchAllOrders } = useContext(appContext);
+  const { fetchAllOrders, admin } = useContext(appContext);
   useEffect(() => {
     fetchAllOrders();
   }, []);
@@ -15,8 +15,7 @@ const OrderManagementPage = () => {
         <Typography variant="h4" align="center" pb="1rem">
           All Orders
         </Typography>
-
-        <TopNavbar />
+        {admin?.isLoggedIn && <TopNavbar />}
 
         <OrdersManagement />
       </Container>

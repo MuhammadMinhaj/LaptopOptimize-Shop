@@ -40,7 +40,7 @@ const Actions = ({ order }) => {
         <Button
           startIcon={<VisibilityIcon />}
           color="secondary"
-          onClick={() => history.push(`/bicycles/${order?.product?._id}`)}
+          onClick={() => history.push(`/store/${order?.product?._id}`)}
         >
           View
         </Button>

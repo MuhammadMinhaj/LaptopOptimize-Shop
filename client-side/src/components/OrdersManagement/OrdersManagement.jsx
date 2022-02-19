@@ -9,7 +9,7 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import appContext from "../../context/context";
 import Actions from "./Actions";
 import Image from "./Image";
@@ -80,9 +80,7 @@ export default function Orders() {
   const handleSubmit = async (...rest) => {
     await changeOrderStatus(...rest);
   };
-  useEffect(() => {
-    console.log({ orders });
-  }, [orders]);
+
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
       <TableContainer sx={{ maxHeight: 440 }}>

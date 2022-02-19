@@ -10,9 +10,12 @@ function ProductDetailPage() {
   const history = useHistory();
 
   useEffect(() => {
-    fetchSingleProductById(id, history);
-    fetchAllReviews(null, id);
-  }, []);
+    if (id) {
+      console.log({ id });
+      fetchSingleProductById(id, history);
+      fetchAllReviews(null, id);
+    }
+  }, [id]);
 
   return (
     <main>

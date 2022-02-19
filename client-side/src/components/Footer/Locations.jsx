@@ -14,7 +14,7 @@ const Item = ({ title, description, number }) => (
   </Box>
 );
 
-const RelatedLinks = () => (
+const Locations = () => (
   <Box>
     <Typography color="var(--white)" variant="h5">
       Our Branches
@@ -24,26 +24,21 @@ const RelatedLinks = () => (
     </Box>
 
     <Item
-      title="Big Pyramid Avenue"
-      description="105 BellSouth Street, Madrid
-"
-      number={"+820-987-2365"}
+      title="CDA AVENUE Branch"
+      description="4000 East Nasirabad, Chittagong"
+      number={"+123-456-7890"}
     />
     <Item
-      title="Enclave Tour Spot
-"
-      description="105 BellSouth Street, Madrid
-"
-      number={"+820-987-2365"}
+      title="Khulshi Branch"
+      description="4225 Chittagong Sadar, Chittagong"
+      number={"+321-654-0987"}
     />
     <Item
-      title="Lesiure Town Park
-"
-      description="105 BellSouth Street, Madrid
-"
-      number={"+820-987-2365"}
+      title="Chawkbazar Branch"
+      description="4203 Chawkbazar, Chittagong"
+      number={"+123-456-7890"}
     />
   </Box>
 );
 
-export default RelatedLinks;
+export default Locations;

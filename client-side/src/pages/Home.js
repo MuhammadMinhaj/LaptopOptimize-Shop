@@ -5,7 +5,6 @@ import Category from "../components/Category/Category";
 import Title from "../components/Common/Title";
 import Fqas from "../components/FQAS/FQAS";
 import Products from "../components/Products/Products";
-// import Reviews from "../components/Reviews/Reviews";
 import Slider from "../components/Slider/Slider";
 import StaticInfo from "../components/StaticInfo/StaticInfo";
 import Testimonials from "../components/Testimonials/Testimonials.jsx";

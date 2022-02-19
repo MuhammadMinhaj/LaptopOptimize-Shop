@@ -47,12 +47,11 @@ const Slide = () => {
             </Typography>
             <Box
               display="flex"
-              // flexDirection={isMD ? "column" : "row"}
               alignItems="center"
               justifyContent={isMD ? "center" : "flex-start"}
             >
               <Button
-                href="/bycycles"
+                href="/store"
                 variant="outlined"
                 color="secondary"
                 startIcon={<LaptopIcon />}
@@ -69,7 +68,7 @@ const Slide = () => {
                   startIcon={<LoginIcon />}
                   size="large"
                 >
-                  Sign in
+                  Sign Up
                 </Button>
               )}
             </Box>

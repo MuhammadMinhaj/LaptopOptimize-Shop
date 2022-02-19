@@ -1,8 +1,9 @@
 import {
   Facebook as FacebookIcon,
-  Instagram as InstagramIcon,
+  GitHub as GithHubIcon,
+  LinkedIn as LinkedInIcon,
   Twitter as TwitterIcon,
-  YouTube as YouTubeIcon
+  YouTube as YouTubeIcon,
 } from "@mui/icons-material";
 import { Box, IconButton } from "@mui/material";
 
@@ -20,7 +21,7 @@ const SocialLinks = () => {
       <IconButton
         size="large"
         color="inherit"
-        href="https://youtube.com"
+        href="https://www.youtube.com/channel/UCBSNbOumi5uNLJz8vFGJLRQ"
         target="_blank"
       >
         <YouTubeIcon />
@@ -28,7 +29,7 @@ const SocialLinks = () => {
       <IconButton
         size="large"
         color="inherit"
-        href="https://twitter.com"
+        href="https://twitter.com/withMinhaj"
         target="_blank"
       >
         <TwitterIcon />
@@ -36,10 +37,18 @@ const SocialLinks = () => {
       <IconButton
         size="large"
         color="inherit"
-        href="https://instagram.com"
+        href="https://github.com/MuhammadMinhaj"
         target="_blank"
       >
-        <InstagramIcon />
+        <GithHubIcon />
+      </IconButton>
+      <IconButton
+        size="large"
+        color="inherit"
+        href="https://www.linkedin.com/in/Muhammad-Minhaj"
+        target="_blank"
+      >
+        <LinkedInIcon />
       </IconButton>
     </Box>
   );

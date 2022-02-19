@@ -65,11 +65,7 @@ export default function BasicMenu({ handleClose, anchorEl, open }) {
       <MenuItem onClick={() => history.push("/all/orders")} divider>
         {isLoggedIn ? "Manage Orders" : "All Orders"}
       </MenuItem>
-      {!isLoggedIn && (
-        <MenuItem onClick={() => history.push("/user/pay")} divider>
-          Pay
-        </MenuItem>
-      )}
+
       {!isLoggedIn && (
         <MenuItem onClick={() => history.push("/user/reviews")} divider>
           Reviews

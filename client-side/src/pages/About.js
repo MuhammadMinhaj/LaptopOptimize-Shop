@@ -6,18 +6,25 @@ const About = () => {
   return (
     <Container>
       <Box py="6rem">
-        <Title title="About Us" />
+        <Title fTitle="About" lTitle="Us" />
         <Typography variant="subtitle1" pt="1rem" align="center">
-          If you’re anything like us, you’re passionate about cycling. It’s the
-          freedom of being on a bike, the burning feeling through your legs when
-          you climb a steep hill, the feeling of accomplishment after a big ride
-          and the competitiveness and camaraderie that makes the sport so
-          enjoyable. And then, of course, there’s all the gear! You’re on a
-          constant hunt for the newest and latest equipment. Equipment that will
-          make your ride feel lighter, faster and perhaps even a little cooler.
-          That’s what we love about cycling (just as much as having that latte
-          at the end of a ride). Bicycles, wheels, components, saddles,
-          handlebars - it’s never-ending and so much fun.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          consequatur maiores laudantium, dolore minima magni ipsa tempore
+          officia praesentium autem dolor blanditiis qui labore saepe sint sequi
+          molestias minus expedita distinctio. Illo culpa eaque inventore hic
+          repellendus, enim doloribus eius aspernatur suscipit, odio iusto, vel
+          sint dolore iure repellat a dolorem optio autem quisquam sunt. Enim
+          reprehenderit aut rem cumque tenetur, hic fugiat eaque corrupti! Quia
+          libero animi perferendis reprehenderit officiis laborum tempore, optio
+          est repellat ad inventore ex deserunt, fuga exercitationem quibusdam
+          error? Eum asperiores in voluptatibus similique explicabo! Et illo
+          consectetur similique optio perferendis tempora velit quae mollitia
+          accusamus alias inventore deleniti odit porro dolorum minus dolorem
+          eveniet sit nisi temporibus nemo saepe corrupti est, dignissimos
+          obcaecati. Voluptatibus hic magni, porro recusandae eos vel quibusdam
+          laborum pariatur consectetur unde, dolor incidunt, qui provident dicta
+          repellendus aliquam fugit officiis? Veritatis, incidunt consequatur?
+          Quaerat, consequatur veritatis doloribus exercitationem enim aliquid!
         </Typography>
       </Box>
     </Container>

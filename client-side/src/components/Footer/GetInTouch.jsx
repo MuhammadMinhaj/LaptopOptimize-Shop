@@ -26,7 +26,7 @@ const GetInTouch = () => (
     </Box>
     <Item
       icon={<LocationOnIcon color="inherit" />}
-      description="105 BellSouth Street, BR, United States"
+      description="4203 Chawkbazar, Chittagong Sadar, Chittagong, Bangladesh"
     />
     <Item
       icon={<EmailIcon color="inherit" />}

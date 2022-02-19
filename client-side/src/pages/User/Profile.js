@@ -1,7 +1,6 @@
 import { DirectionsBike, Home as HomeIcon } from "@mui/icons-material";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import LogoutIcon from "@mui/icons-material/Logout";
-import PaymentIcon from "@mui/icons-material/Payment";
 import ReviewsIcon from "@mui/icons-material/Reviews";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Box, Divider, Grid, Typography } from "@mui/material";
@@ -43,11 +42,6 @@ function UserProfilePage() {
                 name="My Orders"
                 icon={<ShoppingBasketIcon style={iconStyle} />}
                 path="/user/orders"
-              />
-              <Item
-                name="Payment"
-                icon={<PaymentIcon style={iconStyle} />}
-                path="/user/pay"
               />
 
               <Item

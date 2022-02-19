@@ -10,38 +10,41 @@ import Container from "../Common/Container";
 import Title from "../Common/Title";
 const questions = [
   {
-    question: "Do I need an appointment to come and look at bike?",
+    question:
+      "Why Is It Important For Business Owners To Create An Ecommerce Site?",
     answer:
-      "Definitely not, come on in and we’re happy to help you find the right bike.",
+      "Today, people have very less time to purchase items, by going to physical stores. They prefer to browse their mobile devices or PC and shop online. Having an ecommerce site for your business will help you to capture this market base and keep your customers informed about all your latest products and services.",
   },
   {
-    question: "How does it all work?",
+    question:
+      "How Can I Choose The Best Platform For My Ecommerce Business Website?",
     answer:
-      "Great question, and we assume we’re talking about bikes here, but here’s how it works: You come to the store and we will work with you to understand your cycling goals, as modest or aggressive as they may be, and we’ll look to find the right bike, at the right price, in the right size, in a cool color, and with the right accessories to help you reach your goals. Even if those goals simply include easy neighborhood rides with your kids.",
+      "Before getting started with your ecommerce web development, consider the few fundamentals that can help to choose the best platform. Always consider the items that you are selling. Some ecommerce platforms can handle inventory tracking and multiple product options while some others will not. Consider the design options, payment gateways, security of the site, integration with other tools, features and pricing before finalizing on the platform.",
   },
   {
-    question: "How much do your bikes cost?",
+    question: "What Are The Main Activities Of Ecommerce Sites?",
     answer:
-      "The cost of a bike can vary wildly. We have entry level adult bikes that start in the $560 range, and they pretty much top out at prices that would buy a really nice used car. Smaller kids’ bikes tend to fall into the range of $210-$400.",
+      "Ecommerce websites help online shoppers make a safe purchase from online stores and they are considered as platforms that help in buying and selling. It also helps in gathering and using demographics data from various channels and improves the customer service.",
   },
   {
-    question: "What makes you better than the big box stores?",
+    question: "Why Is Ecommerce Needed For Any Business?",
     answer:
-      "Well, if you need a soccer ball, a beer cooler, and a shotgun while you’re getting your bike, maybe we aren’t better. However if you want a great bike that will stand the test of time from a company that is passionate about giving our riders the best experience possible on awesome bikes backed by great bike companies like Trek and Cannondale, then we’re the place to get a bike. We’ll also try to get you in and out of the shop fast enough that there’ll still be time to pick up that soccer ball at one of the big box stores on the way home.",
+      "Ecommerce has gained much popularity nowadays because it offers business a whole range of opportunities ranging from marketing opportunities to increasing the range of products that helps to generate sales. It is with an optimized and well created e-store that you can easily create and achieve the goals and also offer the customers round the clock support services.",
   },
   {
-    question: "Do you sell e-bikes?",
-    answer: "You’d better believe it! We sell a lot of e-bikes.",
+    question: "What Are The Different Types Of Ecommerce?",
+    answer:
+      "Ecommerce or internet commerce is basically related with different types of business transactions. The main four ways of ecommerce business is Business to business or B2B, Business to Customer B2C, Customer to Business (C2B and Customer to Customer C2C.",
   },
   {
-    question: "Do you sell bike racks for my car?",
+    question: "How Should I Promote My Ecommerce Site?",
     answer:
-      "Yep, we have a number of bike racks that fit a variety of cars at a variety of price points.",
+      "There are various ways to do this and the first thing to do is to promote the site to all the customers. This will help to increase your customer base. Your website address should be present on every advertisement that your company invests in. Register with the search engines and optimize your website as this will affect the traffic of your site.",
   },
   {
-    question: "What else do you sell?",
+    question: "How To Create An Impressive Website?",
     answer:
-      "Well, you’re asking a lot of questions here, but we’re here to answer your questions, so we pretty much sell everything that will help you enjoy your bike. Some examples in no particular order would include helmets, shoes, gloves, bottles, more clothes than you can shake a stick at, tools, pumps, bags, pedals, saddles, tires, tubes, locks, lubes (for bikes), coffee, and Lemonheads. Actually we don’t sell the coffee and Lemonheads, those are free*. *Price subject to change.",
+      "The beauty of a site lies in the way it operates and how user friendly it is. Ensure that your site is fast, easy to use, professional and attractive. Also make sure that you are able to fulfill the orders very promptly without any delay. In case you are unable to offer the service, make sure that your customer is informed about it via email.",
   },
 ];
 export default function ControlledAccordions() {

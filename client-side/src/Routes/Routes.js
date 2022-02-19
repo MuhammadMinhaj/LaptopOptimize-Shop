@@ -12,7 +12,6 @@ import adminLogin from "../pages/AdminLogin";
 import homePage from "../pages/Home";
 import orderPage from "../pages/Order";
 import orderManagementPage from "../pages/OrdersManagement";
-import payPage from "../pages/Pay";
 import productDetailPage from "../pages/ProductDetail";
 import storePage from "../pages/Store";
 import userOrdersPage from "../pages/User/Orders";
@@ -77,10 +76,6 @@ const userPrivateRoutes = [
   {
     Component: userOrdersPage,
     path: "/user/orders",
-  },
-  {
-    Component: payPage,
-    path: "/user/pay",
   },
 ];
 

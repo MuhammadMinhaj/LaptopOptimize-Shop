@@ -520,7 +520,7 @@ const main = (dispatch) => {
           type: USER_ORDER_CONFIRM_SUCCESS,
           payload: data.order,
         });
-        history.push("/user/pay");
+        history.push("/user/orders");
       }
       dispatch({
         type: APP_SET_ALERT_MESSAGE,

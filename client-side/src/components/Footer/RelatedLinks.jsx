@@ -13,22 +13,21 @@ const LinkItem = ({ name, path }) => (
   </Box>
 );
 
-const About = () => (
+const RelatedLinks = () => (
   <Box>
     <Typography color="var(--white)" variant="h5">
-      About Us
+      Related Links
     </Typography>
     <Box py="0.5rem">
       <Divider />
     </Box>
 
+    <LinkItem name="Store" path="/store" />
+    <LinkItem name="Sign In" path="/user/login" />
+    <LinkItem name="Sign Up" path="/user/signup" />
     <LinkItem name="About Us" path="/about-us" />
-    <LinkItem name="Find a product" path="/store" />
-    <LinkItem name="Products Reviews" path="/reviews" />
-    <LinkItem name="Login" path="/user/login" />
-    <LinkItem name="Signup" path="/user/signup" />
     <LinkItem name="FQAS" path="/fqas" />
   </Box>
 );
 
-export default About;
+export default RelatedLinks;

@@ -44,7 +44,7 @@ function Navbar() {
         {user?.email && <Item name="Dashboard" path="/user/profile" />}
         {isLoggedIn && <Item name="Management" path="/admin/profile" />}
         {!user?.email && !isLoggedIn && (
-          <Item name="Signup" path="/user/signup" />
+          <Item name="Sign In" path="/user/login" />
         )}
       </Box>
     </Box>

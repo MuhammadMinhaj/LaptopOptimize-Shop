@@ -3,7 +3,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { Box, Button } from "@mui/material";
 
 const AuthButton = ({ isLoggedIn, handleClick, isAdmin }) => {
-  const btnName = isAdmin ? "Admin Login" : "User Login";
+  const btnName = isAdmin ? "Admin Login" : "User Sign In";
   return (
     <Box color="var(--white)">
       <Button

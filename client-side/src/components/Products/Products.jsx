@@ -1,11 +1,11 @@
 import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useContext, useState } from "react";
 import appContext from "../../context/context";
+import TopNavbar from "../Admin/TopNavbar";
 import Container from "../Common/Container";
 import AddProduct from "./AddProduct";
 import Product from "./Product";
 import UpdateModal from "./UpdateModal";
-
 const Products = ({ isNone, limit }) => {
   const {
     state: {
@@ -45,6 +45,7 @@ const Products = ({ isNone, limit }) => {
         handleChange={handleChange}
       />
       <Container>
+        {isLoggedIn && !isNone && <TopNavbar />}
         <Box
           display={"flex"}
           justifyContent="space-between"
@@ -57,7 +58,6 @@ const Products = ({ isNone, limit }) => {
               {products?.length || "N/A"}
             </Typography>
           </Typography>
-
           {isLoggedIn && !isNone && <AddProduct />}
         </Box>
         <Grid container spacing={2}>

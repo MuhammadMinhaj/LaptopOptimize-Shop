@@ -1,6 +1,6 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useContext, useEffect } from "react";
-import Accessiblities from "../components/Admin/Accessibilities";
+import TopNavbar from "../components/Admin/TopNavbar";
 import Container from "../components/Common/Container";
 import OrdersManagement from "../components/OrdersManagement/OrdersManagement";
 import appContext from "../context/context";
@@ -15,14 +15,10 @@ const OrderManagementPage = () => {
         <Typography variant="h4" align="center" pb="1rem">
           All Orders
         </Typography>
-        <Grid container spacing={2}>
-          <Grid item sm={3}>
-            <Accessiblities isRow />
-          </Grid>
-          <Grid item sm={9}>
-            <OrdersManagement />
-          </Grid>
-        </Grid>
+
+        <TopNavbar />
+
+        <OrdersManagement />
       </Container>
     </Box>
   );

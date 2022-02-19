@@ -8,18 +8,20 @@ const AddProduct = () => {
     setOpen(!open);
   };
   return (
-    <Box width="80%" display="flex" justifyContent="flex-end">
+    <>
       <Box
         color="var(--primary)"
         maxWidth="400px"
         width="100%"
-        pb="2rem"
-        pt="1rem"
+        display="flex"
+        alignItems="center"
+        height="100%"
+        mb="1rem"
       >
         <Button
           startIcon={<AddIcon />}
           variant="outlined"
-          color="inherit"
+          color="secondary"
           size="large"
           fullWidth
           onClick={handleToggle}
@@ -28,7 +30,7 @@ const AddProduct = () => {
         </Button>
       </Box>
       <AddModal open={open} handleToggle={handleToggle} />
-    </Box>
+    </>
   );
 };
 

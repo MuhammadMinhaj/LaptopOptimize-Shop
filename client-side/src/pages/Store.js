@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { useContext, useEffect } from "react";
 import Title from "../components/Common/Title";
-import Bicycles from "../components/Products/Products";
+import Products from "../components/Products/Products";
 import appContext from "../context/context";
 
 function Store() {
@@ -15,9 +15,9 @@ function Store() {
         <Title
           fTitle="Our"
           lTitle="Store"
-          subTitle="Choose your desire foods"
+          subTitle="Choose your desire products"
         />
-        <Bicycles />
+        <Products />
       </Box>
     </main>
   );

@@ -1,14 +1,13 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBpcTvYw9HkRHVMHMbDpnTH8ipDUmvrd0Y",
-  authDomain: "tensile-quasar-307910.firebaseapp.com",
-  databaseURL: "https://tensile-quasar-307910-default-rtdb.firebaseio.com",
-  projectId: "tensile-quasar-307910",
-  storageBucket: "tensile-quasar-307910.appspot.com",
-  messagingSenderId: "481598840381",
-  appId: "1:481598840381:web:dd272d8e742561de095454",
-  measurementId: "G-HBYXLLYD9X",
+  apiKey: "AIzaSyCJdNaKtqUiE8BY4Ke0THEw7qBh8tGZ0NM",
+  authDomain: "minhaj-laptopoptimize.firebaseapp.com",
+  projectId: "minhaj-laptopoptimize",
+  storageBucket: "minhaj-laptopoptimize.appspot.com",
+  messagingSenderId: "1061235648656",
+  appId: "1:1061235648656:web:04334086f149c08a17d015",
+  measurementId: "G-KVMBWHVG70",
 };
 
 export default firebaseConfig;

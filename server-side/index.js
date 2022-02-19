@@ -10,7 +10,7 @@ const DB_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWO
 
 const PORT = process.env.PORT || 8080;
 
-// To enable cors for accessing our API from anywhere
+// Enabled cors to access from anywhere
 app.use(cors());
 // I have used build-in methods for parsing data from the request body instead of the body-parser package.
 app.use(express.urlencoded({ extended: true }));
@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Welcome to Blissful Pedals",
+    message: "Welcome to Laptop Optimize API's endpoint",
   });
 });
 

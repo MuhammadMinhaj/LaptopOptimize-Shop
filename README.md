@@ -1,14 +1,6 @@
-## Laptop Optimize
+## Laptop Optimize - Server Side (API's)
 
 Demo - [Laptop Optimize Website](https://minhaj-laptopoptimize.web.app)
-
-**Technology used in front-end development**
-
-- React
-- Material UI
-- Material-Icon
-- React-Router-DOM
-- React-Swipeable-Views
 
 **Technology used in Back-end Development**
 
@@ -25,7 +17,7 @@ Demo - [Laptop Optimize Website](https://minhaj-laptopoptimize.web.app)
 
 ## APIs end-points
 
-#### Products Management
+#### - Products management
 
 **Get :** /api/products/single/:id
 
@@ -37,7 +29,7 @@ Demo - [Laptop Optimize Website](https://minhaj-laptopoptimize.web.app)
 
 **Delete :** /api/delete/:id
 
-#### Orders Management
+#### - Orders management
 
 **Get :** /api/order/all
 
@@ -49,42 +41,17 @@ Demo - [Laptop Optimize Website](https://minhaj-laptopoptimize.web.app)
 
 **Put :** /api/order/status/:id
 
-#### Admin Login and Verify
+#### - Admin login and verify
 
 **Post :** /api/admin/login
 
 **Get :** /api/admin/login/verify
 
-## Project Inauguration Procedure
+## Project inauguration procedure
 
 Installing the dependencies that are related to the project using yarn or npm package manager.
 
-### Available scripts for front-end
-
-In the project client-side directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-### Available scripts for back-end
+### Available scripts
 
 In the project server-side directory, you can run:
 
